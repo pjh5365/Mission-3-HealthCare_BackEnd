@@ -19,7 +19,7 @@ import kakao.mission3healthcare_backend.auth.domain.entity.MemberInfo;
  * @author : parkjihyeok
  * @since : 2024/07/04
  */
-@SpringBootTest
+@SpringBootTest // 생성자, 수정자 자동입력 필드가 null이기 때문에 통합테스트일때만 통과함
 @Transactional
 @DisplayName("회원 상세정보 테스트")
 class MemberInfoRepositoryTest {
