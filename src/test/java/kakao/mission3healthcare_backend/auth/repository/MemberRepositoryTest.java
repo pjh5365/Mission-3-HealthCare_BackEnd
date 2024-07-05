@@ -75,4 +75,30 @@ class MemberRepositoryTest {
 	    // Then
 		assertEquals(Optional.empty(), memberRepository.findById(member.getId()));
 	}
+
+	@Test
+	@DisplayName("회원정보가 존재할때 true를 출력하는지 확인하는 테스트")
+	void existByUsernameTest1() {
+	    // Given
+		Member member = Member.builder().username("testId").name("김철수").password("1111").build();
+		memberRepository.save(member);
+
+	    // When
+		boolean result = memberRepository.existsByUsername("testId");
+
+		// Then
+		assertTrue(result);
+	}
+
+	@Test
+	@DisplayName("회원정보가 없을때 false를 출력하는지 확인하는 테스트")
+	void existByUsernameTest2() {
+		// Given
+
+		// When
+		boolean result = memberRepository.existsByUsername("testId");
+
+		// Then
+		assertFalse(result);
+	}
 }
