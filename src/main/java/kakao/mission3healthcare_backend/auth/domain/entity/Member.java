@@ -43,9 +43,10 @@ public class Member extends BaseTimeEntity {
 	private UserRole userRole;
 
 	@Builder
-	public Member(String username, String name, String password) {
+	public Member(String username, String name, String password, UserRole userRole) {
 		this.username = username;
 		this.name = name;
 		this.password = password;
+		this.userRole = userRole;
 	}
 }
