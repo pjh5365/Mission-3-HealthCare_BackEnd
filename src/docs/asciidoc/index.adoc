@@ -1,0 +1,8 @@
+= 헬스케어 API
+:doctype: book
+:source-highlighter: highlightjs
+:toc: left
+:toclevels: 2
+:seclinks:
+
+include::../Mission-3-HealthCare_BackEnd/src/docs/asciidoc/MemberController.adoc[]
