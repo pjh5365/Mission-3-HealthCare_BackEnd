@@ -15,4 +15,6 @@ import kakao.mission3healthcare_backend.auth.domain.entity.Member;
 public interface MemberRepository extends JpaRepository<Member, Long> {
 
 	Optional<Member> findByUsername(String username);
+
+	boolean existsByUsername(String username);
 }
