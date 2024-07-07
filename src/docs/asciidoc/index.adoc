@@ -6,3 +6,4 @@
 :seclinks:
 
 include::../Mission-3-HealthCare_BackEnd/src/docs/asciidoc/MemberController.adoc[]
+include::../Mission-3-HealthCare_BackEnd/src/docs/asciidoc/MemberLogin.adoc[]

@@ -141,7 +141,10 @@ public class MemberLoginTest {
 		mockMvc.perform(post("/api/logout")
 						.with(csrf()))
 				.andExpect(status().is3xxRedirection())
-				.andDo(print());
+				.andDo(print())
+				.andDo((document("{class-name}/{method-name}/",
+						preprocessRequest(prettyPrint()),
+						preprocessResponse(prettyPrint()))));
 
 		// Then
 	}
