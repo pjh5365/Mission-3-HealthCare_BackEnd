@@ -18,6 +18,7 @@ import org.springframework.http.MediaType;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.test.context.support.WithMockUser;
 import org.springframework.test.web.servlet.MockMvc;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.google.gson.Gson;
 
@@ -44,6 +45,7 @@ public class MemberLoginTest {
 	@Test
 	@DisplayName("로그인 성공 테스트")
 	@WithMockUser
+	@Transactional
 	void loginTest1() throws Exception {
 		// Given
 		MemberLoginRequest request = new MemberLoginRequest("testId", "1111");
@@ -75,7 +77,7 @@ public class MemberLoginTest {
 		MemberLoginRequest request = new MemberLoginRequest("testId", "1111");
 
 		// When
-		mockMvc.perform(get("/api/login")
+		mockMvc.perform(post("/api/login")
 						.with(csrf())
 						.contentType(MediaType.APPLICATION_JSON_VALUE)
 						.content(gson.toJson(request)))
@@ -107,7 +109,7 @@ public class MemberLoginTest {
 		memberRepository.save(member);
 
 		// When
-		mockMvc.perform(get("/api/login")
+		mockMvc.perform(post("/api/login")
 						.with(csrf())
 						.contentType(MediaType.APPLICATION_JSON_VALUE)
 						.content(gson.toJson(request)))
@@ -125,6 +127,21 @@ public class MemberLoginTest {
 								fieldWithPath("message").description("처리 결과에 대한 메시지"),
 								fieldWithPath("data").description("처리 결과")
 						)));
+
+		// Then
+	}
+
+	@Test
+	@DisplayName("로그아웃 테스트")
+	@WithMockUser
+	void logOutTest() throws Exception {
+		// Given
+
+		// When
+		mockMvc.perform(post("/api/logout")
+						.with(csrf()))
+				.andExpect(status().is3xxRedirection())
+				.andDo(print());
 
 		// Then
 	}
