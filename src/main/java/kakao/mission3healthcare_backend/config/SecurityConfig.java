@@ -13,6 +13,7 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
 
 import kakao.mission3healthcare_backend.auth.domain.filter.LoginFilter;
+import kakao.mission3healthcare_backend.auth.domain.handler.LogOutSuccessHandler;
 import kakao.mission3healthcare_backend.auth.domain.handler.LoginFailureHandler;
 import kakao.mission3healthcare_backend.auth.domain.handler.LoginSuccessHandler;
 import lombok.RequiredArgsConstructor;
@@ -31,6 +32,7 @@ public class SecurityConfig {
 	private final AuthenticationConfiguration authenticationConfiguration;
 	private final LoginSuccessHandler loginSuccessHandler;
 	private final LoginFailureHandler loginFailureHandler;
+	private final LogOutSuccessHandler logOutSuccessHandler;
 
 	@Bean
 	public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
@@ -48,6 +50,10 @@ public class SecurityConfig {
 
 		http.headers(headers -> headers
 				.frameOptions(HeadersConfigurer.FrameOptionsConfig::sameOrigin)); // h2-console 허용
+
+		http.logout(logout -> logout
+				.logoutUrl("/api/logout")
+				.logoutSuccessHandler(logOutSuccessHandler));
 
 		return http.build();
 	}
