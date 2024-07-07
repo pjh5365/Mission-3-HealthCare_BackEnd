@@ -52,7 +52,7 @@ public class LoginFailureHandler extends SimpleUrlAuthenticationFailureHandler {
 	private static String getErrorMessage(AuthenticationException exception) {
 		String error;
 		if (exception instanceof BadCredentialsException) {
-			error = "아이디 또는 비밀번호 또는 인증번호가 맞지 않습니다. 다시 확인해 주세요.";
+			error = "아이디 또는 비밀번호가 맞지 않습니다. 다시 확인해 주세요.";
 		} else if (exception instanceof InternalAuthenticationServiceException) {
 			error = "내부적으로 발생한 시스템 문제로 인해 요청을 처리할 수 없습니다. 관리자에게 문의하세요.";
 		} else if (exception instanceof UsernameNotFoundException) {
