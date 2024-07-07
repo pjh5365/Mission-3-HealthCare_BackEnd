@@ -36,14 +36,14 @@ public class BasicAuthenticationProvider implements AuthenticationProvider {
 		try {
 			CustomUserDetails userDetails = (CustomUserDetails)customUserDetailsService.loadUserByUsername(username);
 			if (bCryptPasswordEncoder.matches(password, userDetails.getPassword())) { // 비밀번호가 일치한다면
-				log.info("[로그인] : {} 가 로그인에 성공했습니다.", username);
+				log.info("[로그인] - [{}] 가 로그인에 성공했습니다.", username);
 				return new UsernamePasswordAuthenticationToken(username, password, userDetails.getAuthorities());
 			}
 		} catch (UsernameNotFoundException e) {
-			log.error("[로그인] : {} username = {}", e.getMessage(), username);
+			log.error("[로그인] - {} username = [{}]", e.getMessage(), username);
 			throw new UsernameNotFoundException("사용자를 찾을 수 없습니다.");
 		}
-		log.error("[로그인] : {} 가 비밀번호가 맞지않아 로그인에 실패했습니다.", username);
+		log.error("[로그인] - [{}] 가 비밀번호가 맞지않아 로그인에 실패했습니다.", username);
 		throw new BadCredentialsException("비밀번호가 일치하지 않습니다.");
 	}
 

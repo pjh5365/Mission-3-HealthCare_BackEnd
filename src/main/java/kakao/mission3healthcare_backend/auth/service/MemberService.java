@@ -54,7 +54,7 @@ public class MemberService {
 				.build();
 
 		memberRepository.save(member);
-		log.info("username: [{}] 의 새로운 회원이 회원가입에 성공했습니다.", request.getUsername());
+		log.info("[회원가입] - [username: {}] 의 새로운 회원이 회원가입에 성공했습니다.", request.getUsername());
 
 		return new MemberResponse(member.getUsername(), member.getName());
 	}
