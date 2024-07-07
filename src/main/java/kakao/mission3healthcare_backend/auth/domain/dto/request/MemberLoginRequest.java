@@ -1,5 +1,6 @@
 package kakao.mission3healthcare_backend.auth.domain.dto.request;
 
+import lombok.AllArgsConstructor;
 import lombok.Getter;
 
 /**
@@ -9,6 +10,7 @@ import lombok.Getter;
  * @since : 2024/07/06
  */
 @Getter
+@AllArgsConstructor
 public class MemberLoginRequest {
 
 	private String username;
