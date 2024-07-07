@@ -1,0 +1,21 @@
+== 로그인/로그아웃 API (MemberLogin)
+=== 로그인 성공 API
+==== 요청
+operation::member-login-test/login-test1[snippets="http-request,request-fields"]
+==== 요청
+operation::member-login-test/login-test1[snippets="http-response"]
+=== 로그인 실패 API (존재하지 않는 계정)
+==== 요청
+operation::member-login-test/login-test2[snippets="http-request,request-fields"]
+==== 요청
+operation::member-login-test/login-test2[snippets="http-response,response-fields"]
+=== 로그인 실패 API (비밀번호가 일치하지 않음)
+==== 요청
+operation::member-login-test/login-test3[snippets="http-request,request-fields"]
+==== 요청
+operation::member-login-test/login-test3[snippets="http-response,response-fields"]
+=== 로그아웃 API
+==== 요청
+operation::member-login-test/log-out-test[snippets="http-request"]
+==== 요청
+operation::member-login-test/log-out-test[snippets="http-response"]
