@@ -12,7 +12,9 @@ import org.springframework.security.config.annotation.web.configurers.HeadersCon
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
 
+import kakao.mission3healthcare_backend.auth.domain.CustomAuthenticationEntryPoint;
 import kakao.mission3healthcare_backend.auth.domain.filter.LoginFilter;
+import kakao.mission3healthcare_backend.auth.domain.handler.CustomAccessDeniedHandler;
 import kakao.mission3healthcare_backend.auth.domain.handler.LogOutSuccessHandler;
 import kakao.mission3healthcare_backend.auth.domain.handler.LoginFailureHandler;
 import kakao.mission3healthcare_backend.auth.domain.handler.LoginSuccessHandler;
@@ -33,12 +35,14 @@ public class SecurityConfig {
 	private final LoginSuccessHandler loginSuccessHandler;
 	private final LoginFailureHandler loginFailureHandler;
 	private final LogOutSuccessHandler logOutSuccessHandler;
+	private final CustomAuthenticationEntryPoint customAuthenticationEntryPoint;
+	private final CustomAccessDeniedHandler customAccessDeniedHandler;
 
 	@Bean
 	public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
 		http.authorizeHttpRequests(auth ->
 				// 로그인, 로그아웃, 회원가입은 누구나 접근가능
-				auth.requestMatchers("/api/login", "/api/logout", "/api/users")
+				auth.requestMatchers("/api/login", "/api/logout", "/api/users", "/error")
 						.permitAll()
 						.requestMatchers(PathRequest.toH2Console()).permitAll() // 개발단계에선 h2-console 허용
 						.anyRequest()
@@ -54,6 +58,10 @@ public class SecurityConfig {
 		http.logout(logout -> logout
 				.logoutUrl("/api/logout")
 				.logoutSuccessHandler(logOutSuccessHandler));
+
+		http.exceptionHandling(handler -> handler
+				.authenticationEntryPoint(customAuthenticationEntryPoint)
+				.accessDeniedHandler(customAccessDeniedHandler));
 
 		return http.build();
 	}
