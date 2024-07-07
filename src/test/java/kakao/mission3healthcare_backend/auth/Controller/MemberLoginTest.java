@@ -148,4 +148,18 @@ public class MemberLoginTest {
 
 		// Then
 	}
+
+	@Test
+	@DisplayName("권한이 없는 사용자가 접근시 리다이렉션 시키는지 확인하는 테스트")
+	void unAuthorizationTest() throws Exception {
+	    // Given
+
+	    // When
+		mockMvc.perform(post("/api/users/details")
+						.with(csrf()))
+				.andExpect(status().is3xxRedirection())
+				.andDo(print());
+
+	    // Then
+	}
 }
