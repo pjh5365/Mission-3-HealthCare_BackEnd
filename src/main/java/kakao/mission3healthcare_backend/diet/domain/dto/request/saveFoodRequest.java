@@ -1,4 +1,4 @@
-package kakao.mission3healthcare_backend.Diet.Domain.Dto;
+package kakao.mission3healthcare_backend.diet.domain.dto;
 
 import lombok.Data;
 @Data
