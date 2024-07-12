@@ -1,4 +1,4 @@
-package kakao.mission3healthcare_backend.auth.Controller;
+package kakao.mission3healthcare_backend.auth.controller;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

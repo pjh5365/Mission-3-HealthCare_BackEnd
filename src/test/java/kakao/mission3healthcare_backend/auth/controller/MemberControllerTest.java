@@ -1,4 +1,4 @@
-package kakao.mission3healthcare_backend.auth.Controller;
+package kakao.mission3healthcare_backend.auth.controller;
 
 import static org.mockito.BDDMockito.*;
 import static org.springframework.restdocs.mockmvc.MockMvcRestDocumentation.*;
