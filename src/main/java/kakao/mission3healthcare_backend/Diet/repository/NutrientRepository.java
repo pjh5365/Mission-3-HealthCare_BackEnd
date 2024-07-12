@@ -16,9 +16,7 @@ import kakao.mission3healthcare_backend.diet.domain.entity.Nutrient;
 public interface NutrientRepository extends JpaRepository<Nutrient, Long> {
 
 	@Query("select n from Nutrient n "
-			+ "join fetch n.food f "
-			+ "where f.foodName = :foodName")
+			+ "join fetch n.foodMenu fm "
+			+ "where fm.foodName = :foodName")
 	List<Nutrient> findByFoodName(String foodName);
-
-	List<Nutrient> findByFoodId(Long foodId);
 }
