@@ -1,34 +1,36 @@
-package kakao.mission3healthcare_backend.Diet.Domain.Entity;
+package kakao.mission3healthcare_backend.diet.domain.entity;
 
-import jakarta.persistence.*;
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.FetchType;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
+import kakao.mission3healthcare_backend.common.entity.BaseEntity;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 
 @Entity
 @Getter
 @Builder
+@NoArgsConstructor
 @AllArgsConstructor
-public class Food {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long food_id;
+public class Food extends BaseEntity {
 
-    @Column
-    private long diet_id;
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name = "food_id")
+	private Long id;
 
-    @Column
-    private String foodName;
+	@ManyToOne(fetch = FetchType.LAZY)
+	@JoinColumn(name = "diet_id", nullable = false)
+	private Diet diet;
 
-    @OneToOne(cascade = CascadeType.ALL)  // cascade 속성 설정
-    private Nutrient nutrient;
-
-    public Food() {
-
-    }
-
-    public void addNutrient(Nutrient nutrient){
-        this.nutrient = nutrient;
-    }
+	@Column(name = "food_name", nullable = false)
+	private String foodName;
 }
 
