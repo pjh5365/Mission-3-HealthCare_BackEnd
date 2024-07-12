@@ -28,8 +28,8 @@ public class Nutrient {
 	private Long id;
 
 	@ManyToOne(fetch = FetchType.LAZY)
-	@JoinColumn(name = "food_id", nullable = false)
-	private Food food;
+	@JoinColumn(name = "food_menu_id", nullable = false)
+	private FoodMenu foodMenu;
 
 	@Enumerated(EnumType.STRING)
 	private NutrientType nutrientType; // 영양소 종류
