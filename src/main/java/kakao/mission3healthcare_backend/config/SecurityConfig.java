@@ -42,7 +42,7 @@ public class SecurityConfig {
 	public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
 		http.authorizeHttpRequests(auth ->
 				// 로그인, 로그아웃, 회원가입은 누구나 접근가능
-				auth.requestMatchers("/api/login", "/api/logout", "/api/users", "/error", "/api/foods")
+				auth.requestMatchers("/api/login", "/api/logout", "/api/users", "/error")
 						.permitAll()
 						.requestMatchers(PathRequest.toH2Console()).permitAll() // 개발단계에선 h2-console 허용
 						.anyRequest()
