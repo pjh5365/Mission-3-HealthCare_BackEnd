@@ -71,8 +71,10 @@ public class DietController {
 	 * @param date 식단 날짜
 	 * @return 식단 정보
 	 */
-	@GetMapping("/diets/{username}")
-	public ApiMultiResponse<DietResponse> getDietByUsernameAndDate(@PathVariable String username, LocalDate date) {
+	@GetMapping("/diets/{username}/{date}")
+	public ApiMultiResponse<DietResponse> getDietByUsernameAndDate(@PathVariable String username,
+			@PathVariable LocalDate date) {
+
 		return new ApiMultiResponse<>("성공", username + "의 식단 정보입니다.",
 				dietService.getDietByUsernameAndDate(username, date));
 	}
@@ -83,8 +85,8 @@ public class DietController {
 	 * @param id 식단 ID
 	 * @return 식단 정보
 	 */
-	@GetMapping("/diets/{id}")
-	public ApiSingleResponse<DietResponse> getDiet(@PathVariable Long id) {
+	@GetMapping("/diets")
+	public ApiSingleResponse<DietResponse> getDiet(Long id) {
 		return new ApiSingleResponse<>("성공", "식단 정보입니다.",
 				dietService.getDietById(id));
 	}
