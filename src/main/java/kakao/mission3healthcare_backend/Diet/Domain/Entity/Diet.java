@@ -1,5 +1,7 @@
 package kakao.mission3healthcare_backend.diet.domain.entity;
 
+import java.time.LocalDate;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
@@ -36,4 +38,7 @@ public class Diet extends BaseEntity {
 	@Column(name = "meal_type", nullable = false)
 	@Enumerated(EnumType.STRING)
 	private MealType mealType;
+
+	@Column(nullable = false)
+	private LocalDate dietDate;
 }

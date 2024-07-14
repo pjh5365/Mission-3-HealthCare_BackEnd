@@ -2,6 +2,7 @@ package kakao.mission3healthcare_backend.diet.repository;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+import java.time.LocalDate;
 import java.util.List;
 import java.util.Optional;
 
@@ -38,7 +39,7 @@ class FoodRepositoryTest {
 	void setUp() {
 		Member member = Member.builder().username("testId").build();
 		memberRepository.save(member);
-		Diet diet = Diet.builder().member(member).mealType(MealType.BREAKFAST).build();
+		Diet diet = Diet.builder().member(member).mealType(MealType.BREAKFAST).dietDate(LocalDate.of(2024, 1, 1)).build();
 		dietRepository.save(diet);
 
 		savedDiet = diet;

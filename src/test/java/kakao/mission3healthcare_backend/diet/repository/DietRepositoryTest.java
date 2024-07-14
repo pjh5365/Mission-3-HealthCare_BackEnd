@@ -2,6 +2,7 @@ package kakao.mission3healthcare_backend.diet.repository;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+import java.time.LocalDate;
 import java.util.List;
 import java.util.Optional;
 
@@ -37,7 +38,7 @@ class DietRepositoryTest {
 		Member member = Member.builder().username("testId").build();
 		memberRepository.save(member);
 
-		Diet diet = Diet.builder().member(member).mealType(MealType.BREAKFAST).build();
+		Diet diet = Diet.builder().member(member).mealType(MealType.BREAKFAST).dietDate(LocalDate.of(2024, 1, 1)).build();
 
 		// When
 		dietRepository.save(diet);
@@ -56,11 +57,11 @@ class DietRepositoryTest {
 		Member member = Member.builder().username("testId").build();
 		memberRepository.save(member);
 
-		Diet diet1 = Diet.builder().member(member).mealType(MealType.BREAKFAST).build();
-		Diet diet2 = Diet.builder().member(member).mealType(MealType.LUNCH).build();
-		Diet diet3 = Diet.builder().member(member).mealType(MealType.SNACK).build();
-		Diet diet4 = Diet.builder().member(member).mealType(MealType.DINNER).build();
-		Diet diet5 = Diet.builder().member(member).mealType(MealType.BREAKFAST).build();
+		Diet diet1 = Diet.builder().member(member).mealType(MealType.BREAKFAST).dietDate(LocalDate.of(2024, 1, 1)).build();
+		Diet diet2 = Diet.builder().member(member).mealType(MealType.LUNCH).dietDate(LocalDate.of(2024, 1, 1)).build();
+		Diet diet3 = Diet.builder().member(member).mealType(MealType.SNACK).dietDate(LocalDate.of(2024, 1, 1)).build();
+		Diet diet4 = Diet.builder().member(member).mealType(MealType.DINNER).dietDate(LocalDate.of(2024, 1, 1)).build();
+		Diet diet5 = Diet.builder().member(member).mealType(MealType.BREAKFAST).dietDate(LocalDate.of(2024, 1, 2)).build();
 
 		dietRepository.save(diet1);
 		dietRepository.save(diet2);
@@ -84,7 +85,7 @@ class DietRepositoryTest {
 		Member member = Member.builder().username("testId").build();
 		memberRepository.save(member);
 
-		Diet diet = Diet.builder().member(member).mealType(MealType.BREAKFAST).build();
+		Diet diet = Diet.builder().member(member).mealType(MealType.BREAKFAST).dietDate(LocalDate.of(2024, 1, 1)).build();
 		dietRepository.save(diet);
 
 		// When
