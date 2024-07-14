@@ -1,0 +1,61 @@
+== 식단 API (DietController)
+=== 저장된 음식 메뉴 리스트 조회 API
+==== 요청
+operation::diet-controller-test/get-foods-test[snippets="http-request"]
+==== 응답
+operation::diet-controller-test/get-foods-test[snippets="http-response,response-fields"]
+=== 음식 메뉴 추가 API
+==== 요청
+operation::diet-controller-test/add-food-test[snippets="http-request,request-fields"]
+==== 응답
+operation::diet-controller-test/add-food-test[snippets="http-response,response-fields"]
+=== 한 회원의 식단정보 조회 API
+==== 요청
+operation::diet-controller-test/get-diets-test[snippets="http-request,path-parameters"]
+==== 응답
+operation::diet-controller-test/get-diets-test[snippets="http-response,response-fields"]
+=== 한 회원의 하루 식단정보 조회 API
+==== 요청
+operation::diet-controller-test/get-diet-by-username-and-date-test[snippets="http-request,path-parameters"]
+==== 응답
+operation::diet-controller-test/get-diet-by-username-and-date-test[snippets="http-response,response-fields"]
+=== 하나의 식단정보 조회 (성공) API
+==== 요청
+operation::diet-controller-test/get-diet-by-id-test[snippets="http-request,query-parameters"]
+==== 응답
+operation::diet-controller-test/get-diet-by-id-test[snippets="http-response,response-fields"]
+=== 하나의 식단정보 조회 (실패) API
+==== 요청
+operation::diet-controller-test/get-diet-by-id-fail-test[snippets="http-request,query-parameters"]
+==== 응답
+operation::diet-controller-test/get-diet-by-id-fail-test[snippets="http-response,response-fields"]
+=== 식단 추가 (성공) API
+==== 요청
+operation::diet-controller-test/add-diet-test[snippets="http-request,request-fields"]
+==== 응답
+operation::diet-controller-test/add-diet-test[snippets="http-response,response-fields"]
+=== 식단 추가 (실패) API
+==== 요청
+operation::diet-controller-test/add-diet-test[snippets="http-request,request-fields"]
+==== 응답
+operation::diet-controller-test/add-diet-test[snippets="http-response,response-fields"]
+=== 식단 수정 (성공) API
+==== 요청
+operation::diet-controller-test/update-diet-test[snippets="http-request,request-fields"]
+==== 응답
+operation::diet-controller-test/update-diet-test[snippets="http-response,response-fields"]
+=== 식단 수정 (실패) API
+==== 요청
+operation::diet-controller-test/update-diet-test[snippets="http-request,request-fields"]
+==== 응답
+operation::diet-controller-test/update-diet-test[snippets="http-response,response-fields"]
+=== 식단 삭제 (성공) API
+==== 요청
+operation::diet-controller-test/delete-diet-test[snippets="http-request,request-fields"]
+==== 응답
+operation::diet-controller-test/delete-diet-test[snippets="http-response,response-fields"]
+=== 식단 삭제 (실패) API
+==== 요청
+operation::diet-controller-test/delete-diet-test[snippets="http-request,request-fields"]
+==== 응답
+operation::diet-controller-test/delete-diet-test[snippets="http-response,response-fields"]
