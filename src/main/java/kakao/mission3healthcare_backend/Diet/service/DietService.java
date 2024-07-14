@@ -1,5 +1,6 @@
 package kakao.mission3healthcare_backend.diet.service;
 
+import java.time.LocalDate;
 import java.util.List;
 
 import org.springframework.stereotype.Service;
@@ -46,6 +47,29 @@ public class DietService {
 		return dietRepository.findByUsername(username)
 				.stream().map(this::getDiet)
 				.toList();
+	}
+
+	/**
+	 * 한 회원의 하루 식단 조회 메서드
+	 *
+	 * @param username 회원ID
+	 * @param date 날짜
+	 * @return 회원의 식단정보
+	 */
+	public List<DietResponse> getDietByUsernameAndDate(String username, LocalDate date) {
+		return dietRepository.findByUsernameAndDate(username, date)
+				.stream().map(this::getDiet)
+				.toList();
+	}
+
+	/**
+	 * 식단 ID로 식단에 대한 정보를 조회하는 메서드
+	 *
+	 * @param id 식단 ID
+	 * @return 식단정보
+	 */
+	public DietResponse getDietById(Long id) {
+		return getDiet(findDiet(id));
 	}
 
 	/**
