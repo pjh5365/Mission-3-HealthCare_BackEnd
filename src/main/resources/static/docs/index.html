@@ -475,7 +475,9 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_한_회원의_하루_식단정보_조회_api">한 회원의 하루 식단정보 조회 API</a></li>
 <li><a href="#_하나의_식단정보_조회_성공_api">하나의 식단정보 조회 (성공) API</a></li>
 <li><a href="#_하나의_식단정보_조회_실패_api">하나의 식단정보 조회 (실패) API</a></li>
+<li><a href="#_이미지_저장_api">이미지 저장 API</a></li>
 <li><a href="#_식단_추가_성공_api">식단 추가 (성공) API</a></li>
+<li><a href="#_식단_추가_성공_이미지_api">식단 추가 (성공 - 이미지) API</a></li>
 <li><a href="#_식단_추가_실패_api">식단 추가 (실패) API</a></li>
 <li><a href="#_식단_수정_성공_api">식단 수정 (성공) API</a></li>
 <li><a href="#_식단_수정_실패_api">식단 수정 (실패) API</a></li>
@@ -498,7 +500,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <h5 id="_요청_http_request">HTTP request</h5>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">POST /api/users?_csrf=Tm6v1msL5ABiXhjoms5efGALaxdCZSRppd8djxqLrE3Uf8gEewzKs19o1mVPbyrfqeNqSAM4Ri92VRxEkOguvCm8lHXlSqkx HTTP/1.1Content-Type: application/json;charset=UTF-8
+<pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">POST /api/users?_csrf=AZBQyJ1N96WjWwyDLza4soEwrNtxkj7Uuj3edsfp2ZXmArhlNKc28Pgrx5GOaDSwGRuM1rMDgbkVog353w7nFfXb6_HWYIwG HTTP/1.1
+Content-Type: application/json;charset=UTF-8
 Content-Length: 74
 Host: localhost:8080
 
@@ -624,7 +627,9 @@ Content-Length: 151
 <h5 id="_요청_3_http_request">HTTP request</h5>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">POST /api/users?_csrf=9tZP231pWoVFKU1G1cAFBG2WGAD9P-bErt_HFsd81k7FYf2el-Z-7E0IbrxoTS935u0xYA6vNWHLDdTpzb2iIvRL4C-jWZn7 HTTP/1.1Content-Type: application/json;charset=UTF-8Content-Length: 74
+<pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">POST /api/users?_csrf=8h0Hygt6wWvJCm34twhPxQzTH54CEp30BscCBaZC2gBSE0kfwClh-jhI9w_kbwjA1iV78TjrMvw7dqXZYvdgMcIg6jJhJ3F5 HTTP/1.1
+Content-Type: application/json;charset=UTF-8
+Content-Length: 74
 Host: localhost:8080
 
 {
@@ -741,7 +746,9 @@ Content-Length: 138
 <h5 id="_요청_5_http_request">HTTP request</h5>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">PATCH /api/users?_csrf=izJXNjbOPqOP1ygzWM1l38ZiZp7m2XDzyNAgl3gMZQd97VusvAdnBVf6Wpei4E1XbOBR66NVS__T4EXe-LMX8Us1VTAcjmuZ HTTP/1.1Content-Type: application/json;charset=UTF-8Content-Length: 51
+<pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">PATCH /api/users?_csrf=fF23JLwl6GKcfEM2zo0M04YOHY4IlyoDnBbxN_K5Y7CGkYppSDyOQI0V2AaxSnoE_6A44OU4MLY_8houryWQVpTaUtG-9LkI HTTP/1.1
+Content-Type: application/json;charset=UTF-8
+Content-Length: 51
 Host: localhost:8080
 
 {
@@ -860,7 +867,9 @@ Content-Length: 158
 <h5 id="_요청_7_http_request">HTTP request</h5>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">PATCH /api/users?_csrf=rxdU4arwLsX4h3MBwCfki_sutTdSECK3W-tjAcjeRagbc7cynC5jhcvBTPXVvkAx8ArQuc0bmFZkIEeaY45ROfDsI8otQINW HTTP/1.1Content-Type: application/json;charset=UTF-8Content-Length: 51
+<pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">PATCH /api/users?_csrf=hI6khnIQ33Qt5sKhuJq-H9DtDvOciA6fizUF189GvnfB8Rz4vLucsxEl6kcAhfWSireKLbTbI8v4vjay6QY94qtxh0b3xSnN HTTP/1.1
+Content-Type: application/json;charset=UTF-8
+Content-Length: 51
 Host: localhost:8080
 
 {
@@ -971,7 +980,9 @@ Content-Length: 153
 <h5 id="_요청_9_http_request">HTTP request</h5>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">PATCH /api/users?_csrf=9uj0jLCOCrcyc2bAJW8_5zKV50VcG02o2ah3mF3gJRIELAybz42QuYDob4MfQl-mQ0IL1wL3yic6eiiF7JtD_DnSHCdlFDr5 HTTP/1.1Content-Type: application/json;charset=UTF-8Content-Length: 82
+<pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">PATCH /api/users?_csrf=_IdpxDewotVHQi_GA-Xp-ReHHxTP9uMLdSYAV-lWhU-YorK-xOVZ8gGDw-xqIRinYMjdwC-zMnb9k9UmQhQ0Z9Azsyyqm4WJ HTTP/1.1
+Content-Type: application/json;charset=UTF-8
+Content-Length: 82
 Host: localhost:8080
 
 {
@@ -1096,7 +1107,9 @@ Content-Length: 158
 <h5 id="_요청_11_http_request">HTTP request</h5>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">PATCH /api/users?_csrf=qPoYS1PJ5M--7f78oeAfze1VVK01ZsOyT_Ta_96OUn_2pEZim8gpKjLw0q6T2c6fxM0r-No3ecxXB_CfKcy_yLvqZEvFwiMB HTTP/1.1Content-Type: application/json;charset=UTF-8Content-Length: 82
+<pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">PATCH /api/users?_csrf=CwEHIP4wnweisO-gJGYnTtNNz3w4Av3dQWHtubXbN2exHysqMzEyQZoAqmOPhIuVHEsTebcr4h5eZs7wIlfbgYDuAVWCfE8S HTTP/1.1
+Content-Type: application/json;charset=UTF-8
+Content-Length: 82
 Host: localhost:8080
 
 {
@@ -1213,7 +1226,9 @@ Content-Length: 153
 <h5 id="_요청_13_http_request">HTTP request</h5>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">PATCH /api/users?_csrf=NJYQqGS5fnuW0ElB2zu7i4cTSyUB_OW3EuRmN2XVaNHEeWQrBq4jyVzYH0i75CskuRaPvrMiZkRkmYGaK9UFD1TmW7L0HVBK HTTP/1.1Content-Type: application/json;charset=UTF-8Content-Length: 82
+<pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">PATCH /api/users?_csrf=ijtEDyv86XiUg5OhmIU0PastcSXuw7Cm67wSGekIXIbTo10VvQl1PRLN3h65u6DD-agAD5pMXB2NotKL24ogfI86OeLhkT8i HTTP/1.1
+Content-Type: application/json;charset=UTF-8
+Content-Length: 82
 Host: localhost:8080
 
 {
@@ -1330,7 +1345,9 @@ Content-Length: 148
 <h5 id="_요청_15_http_request">HTTP request</h5>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">POST /api/users/details?_csrf=A4BBHrunkW5be-JTxGJDOqhWcr1fls8TIULKt-OvdKNtj-sSO7UgLdnD9Qp2Gdo1oE93C5xnX9xv8Pw-RHWogtWWR8JZtt1w HTTP/1.1Content-Type: application/json;charset=UTF-8Content-Length: 50
+<pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">POST /api/users/details?_csrf=DR9R_k7WPIFOrtt3qCj3gBOv23JZmi4c5t3ZwmBy2xUVSvQHOS1kzSziD7BjyuoVmwXDuSSe9hBoqRgx1-vh9QZD6XchKZY- HTTP/1.1
+Content-Type: application/json;charset=UTF-8
+Content-Length: 50
 Host: localhost:8080
 
 {
@@ -1449,7 +1466,9 @@ Content-Length: 163
 <h5 id="_요청_17_http_request">HTTP request</h5>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">POST /api/users/details?_csrf=A4BBHrunkW5be-JTxGJDOqhWcr1fls8TIULKt-OvdKNtj-sSO7UgLdnD9Qp2Gdo1oE93C5xnX9xv8Pw-RHWogtWWR8JZtt1w HTTP/1.1Content-Type: application/json;charset=UTF-8Content-Length: 50
+<pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">POST /api/users/details?_csrf=DR9R_k7WPIFOrtt3qCj3gBOv23JZmi4c5t3ZwmBy2xUVSvQHOS1kzSziD7BjyuoVmwXDuSSe9hBoqRgx1-vh9QZD6XchKZY- HTTP/1.1
+Content-Type: application/json;charset=UTF-8
+Content-Length: 50
 Host: localhost:8080
 
 {
@@ -1573,7 +1592,9 @@ Content-Length: 163
 <h5 id="_요청_19_http_request">HTTP request</h5>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">POST /api/login?_csrf=VdRzYf429IZiU6bMFyBJV44DvJjgGtybtOxe1KmQ4P-vSZSmZOVFV5hQkLFPYZ_-IA19brYwkaDQKLq2gdQ_5p6m05rJefKe HTTP/1.1Content-Type: application/json;charset=UTF-8Content-Length: 50
+<pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">POST /api/login?_csrf=yXbewADRWxdFJaO1XN9c86Tm4yEp6ro7swQXE5A-bUjHvTlAqE7r8jTmPyRoRpuNPvJowMLfzhkY2I0W1TN2IqZfXyqmj1wk HTTP/1.1
+Content-Type: application/json;charset=UTF-8
+Content-Length: 50
 Host: localhost:8080
 
 {
@@ -1643,7 +1664,9 @@ Location: https://www.kakaocorp.com/</code></pre>
 <h5 id="_요청_21_http_request">HTTP request</h5>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">POST /api/login?_csrf=g5CbAEpD3bhTojtWsum6vDpk6eX-mPB3wGorV-N0AUHDTpQNu_T6MHtx5Y5-wV5kgsSOi1gCxN2bqcla9l4fYNNCZCP1eKA4 HTTP/1.1Content-Type: application/json;charset=UTF-8Content-Length: 50
+<pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">POST /api/login?_csrf=pLuBIs9t7unw8GhqFjbWXgpilCa3KZ2STl9a0AhZKcaKiSgHnd63FfkP1ozdlApaJRvibzgBuR6GEfy_dmk-4TBqHva5uhBl HTTP/1.1
+Content-Type: application/json;charset=UTF-8
+Content-Length: 50
 Host: localhost:8080
 
 {
@@ -1754,7 +1777,9 @@ Content-Length: 184
 <h5 id="_요청_23_http_request">HTTP request</h5>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">POST /api/login?_csrf=kK_W4A_5VZq8CkjBjBsm--GX8Mo64IRY0AL_Fxw5-_4nLclD8p3g1jzMY_6ROn346TYSwtjy3atc2LB1sjSZICxYn8sWFa0n HTTP/1.1Content-Type: application/json;charset=UTF-8Content-Length: 50
+<pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">POST /api/login?_csrf=FoZ7UxWeI5BpIRXPQ2KvfjLwFWG56dny8D20XNhn34_y3c3fIeBKaiSuEfZEQnascE-bSQrCOFmK3rzfyF_RP-tW7OrDvqu- HTTP/1.1
+Content-Type: application/json;charset=UTF-8
+Content-Length: 50
 Host: localhost:8080
 
 {
@@ -1870,7 +1895,9 @@ Content-Type: application/x-www-form-urlencoded
 Host: localhost:8080
 Content-Length: 102
 
-_csrf=8Uxy4zlkenc5i8Zx1uUt2j83Kwn-mKhTyP6wXThA3EHnHlyMwnoRgVpQHEIUsqMUtMgZ6FpWBmidqZB-rsyDPgokuHiBK2W_</code></pre></div></div>
+_csrf=JDy0GZ3C7L3Bnka_V6HnL7Ij9WYRLXVdhUqy9Z9yanLlO1EIRl_WIP7x243sq3-OYYzTToUR2AciGUVws3_XkK0UC0aHAzU9</code></pre>
+</div>
+</div>
 </div>
 </div>
 <div class="sect3">
@@ -1985,7 +2012,7 @@ Content-Length: 169
 <h5 id="_요청_28_http_request">HTTP request</h5>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">POST /api/foods?_csrf=FAoSCbCKhoV7yP4XtTK0KhqOkb0C6JI7TatUCVsHASWyn1ZBIG4rOoLss-FWqst2jR-AEnm8vN800aoWeMpiMDk1MBWK-zdz HTTP/1.1
+<pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">POST /api/foods?_csrf=Erg8oEy1G7dBkGJ4OpaIa1a7LfukrE6kSh6vHPtnTM1V8j9dI45YkSiDLYVsqARICLu8DmSJAMKdynuJeCmYeJ8CdatsxQo7 HTTP/1.1
 Content-Type: application/json;charset=UTF-8
 Content-Length: 223
 Host: localhost:8080
@@ -2938,65 +2965,25 @@ Content-Length: 154
 </div>
 </div>
 <div class="sect2">
-<h3 id="_식단_추가_성공_api">식단 추가 (성공) API</h3>
+<h3 id="_이미지_저장_api">이미지 저장 API</h3>
 <div class="sect3">
 <h4 id="_요청_33">요청</h4>
 <div class="sect4">
 <h5 id="_요청_33_http_request">HTTP request</h5>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">POST /api/diets?_csrf=Teax74N7KVExpwisp7haodmL5RFFtrtVQHj2s9Sx7PvSIKSie9TT3bBKEWYcxTHJxZVux7i6yCgjg4p4dUuXh-OJ28m0GJDD HTTP/1.1
-Content-Type: application/json;charset=UTF-8
-Content-Length: 134
+<pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">POST /api/diets/images HTTP/1.1
+Content-Type: multipart/form-data;charset=UTF-8; boundary=6o2knFse3p53ty9dmcQvWAIx1zInP11uCfbm
 Host: localhost:8080
 
-{
-  "username" : "testId",
-  "mealType" : "BREAKFAST",
-  "foodNames" : [ "국밥", "김치", "콜라" ],
-  "dietDate" : "2024-01-01"
-}</code></pre>
+--6o2knFse3p53ty9dmcQvWAIx1zInP11uCfbm
+Content-Disposition: form-data; name=images; filename=Test.png
+Content-Type: image/png
+
+사진내용
+--6o2knFse3p53ty9dmcQvWAIx1zInP11uCfbm--</code></pre>
 </div>
 </div>
-</div>
-<div class="sect4">
-<h5 id="_요청_33_request_fields">Request fields</h5>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 33.3333%;">
-<col style="width: 33.3333%;">
-<col style="width: 33.3334%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Path</th>
-<th class="tableblock halign-left valign-top">Type</th>
-<th class="tableblock halign-left valign-top">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>username</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">회원ID</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>mealType</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">식단구분</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>foodNames</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Array</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">음식 리스트</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>dietDate</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">식단 날짜</p></td>
-</tr>
-</tbody>
-</table>
 </div>
 </div>
 <div class="sect3">
@@ -3016,12 +3003,12 @@ Cache-Control: no-cache, no-store, max-age=0, must-revalidate
 Pragma: no-cache
 Expires: 0
 X-Frame-Options: DENY
-Content-Length: 97
+Content-Length: 110
 
 {
   "status" : "성공",
-  "message" : "식단 추가에 성공하였습니다.",
-  "data" : ""
+  "message" : "저장된 이미지 파일명입니다.",
+  "data" : "UUID:Test.png"
 }</code></pre>
 </div>
 </div>
@@ -3055,7 +3042,7 @@ Content-Length: 97
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>data</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">처리 결과</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">저장된 이미지 파일명</p></td>
 </tr>
 </tbody>
 </table>
@@ -3063,14 +3050,14 @@ Content-Length: 97
 </div>
 </div>
 <div class="sect2">
-<h3 id="_식단_추가_실패_api">식단 추가 (실패) API</h3>
+<h3 id="_식단_추가_성공_api">식단 추가 (성공) API</h3>
 <div class="sect3">
 <h4 id="_요청_34">요청</h4>
 <div class="sect4">
 <h5 id="_요청_34_http_request">HTTP request</h5>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">POST /api/diets?_csrf=Teax74N7KVExpwisp7haodmL5RFFtrtVQHj2s9Sx7PvSIKSie9TT3bBKEWYcxTHJxZVux7i6yCgjg4p4dUuXh-OJ28m0GJDD HTTP/1.1
+<pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">POST /api/diets?_csrf=ItP6-l8OjYGxTP5yMuFjSZ7rdiJIL2n_fu9PHxR995GF4HJAR7WfmGY9teecLs1EUcxXcaiKW0NxTQzSSNh5Jy1NzqK11UUh HTTP/1.1
 Content-Type: application/json;charset=UTF-8
 Content-Length: 134
 Host: localhost:8080
@@ -3188,23 +3175,23 @@ Content-Length: 97
 </div>
 </div>
 <div class="sect2">
-<h3 id="_식단_수정_성공_api">식단 수정 (성공) API</h3>
+<h3 id="_식단_추가_성공_이미지_api">식단 추가 (성공 - 이미지) API</h3>
 <div class="sect3">
 <h4 id="_요청_35">요청</h4>
 <div class="sect4">
 <h5 id="_요청_35_http_request">HTTP request</h5>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">PATCH /api/diets?_csrf=ro5Hpf0sX2FPq9AT4BeYaYE4AfLO-s_RfBQT92bXWsYg1sfxne8hlJsdaQNiyrYq2TqsWrULLJCsm6r8RSB3wQO1bqQY7vLB HTTP/1.1
+<pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">POST /api/diets?_csrf=Qrw7nsWZMDh1zD4q_Vnp6Kn-lFsPsTD_BFIfV0r0YZCDXeHwdIxZqvegBwlYrggamHTd2c3KuTlp0wnSN2AnMyuRBPPiOdKR HTTP/1.1
 Content-Type: application/json;charset=UTF-8
-Content-Length: 123
+Content-Length: 117
 Host: localhost:8080
 
 {
-  "dietId" : 100,
   "username" : "testId",
   "mealType" : "BREAKFAST",
-  "foodNames" : [ "국밥", "김치", "콜라" ]
+  "dietDate" : "2024-01-01",
+  "imageName" : "UUID:test.png"
 }</code></pre>
 </div>
 </div>
@@ -3226,11 +3213,6 @@ Host: localhost:8080
 </thead>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>dietId</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Number</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">식단ID</p></td>
-</tr>
-<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>username</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">회원ID</p></td>
@@ -3241,9 +3223,14 @@ Host: localhost:8080
 <td class="tableblock halign-left valign-top"><p class="tableblock">식단구분</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>foodNames</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Array</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">음식 리스트</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>dietDate</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">식단 날짜</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>imageName</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">서버에 저장된 이미지 파일명</p></td>
 </tr>
 </tbody>
 </table>
@@ -3270,7 +3257,7 @@ Content-Length: 97
 
 {
   "status" : "성공",
-  "message" : "식단 수정에 성공하였습니다.",
+  "message" : "식단 추가에 성공하였습니다.",
   "data" : ""
 }</code></pre>
 </div>
@@ -3313,23 +3300,23 @@ Content-Length: 97
 </div>
 </div>
 <div class="sect2">
-<h3 id="_식단_수정_실패_api">식단 수정 (실패) API</h3>
+<h3 id="_식단_추가_실패_api">식단 추가 (실패) API</h3>
 <div class="sect3">
 <h4 id="_요청_36">요청</h4>
 <div class="sect4">
 <h5 id="_요청_36_http_request">HTTP request</h5>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">PATCH /api/diets?_csrf=ro5Hpf0sX2FPq9AT4BeYaYE4AfLO-s_RfBQT92bXWsYg1sfxne8hlJsdaQNiyrYq2TqsWrULLJCsm6r8RSB3wQO1bqQY7vLB HTTP/1.1
+<pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">POST /api/diets?_csrf=FUU1hnupsPaXTBIV_RycCxCMiZoHtLMLFSmZVsNg6I4yK560LHIGthmchJS6KnYgmDGoMifppPg3hYsmdh-vY_UB2bdQHKmN HTTP/1.1
 Content-Type: application/json;charset=UTF-8
-Content-Length: 123
+Content-Length: 134
 Host: localhost:8080
 
 {
-  "dietId" : 100,
   "username" : "testId",
   "mealType" : "BREAKFAST",
-  "foodNames" : [ "국밥", "김치", "콜라" ]
+  "foodNames" : [ "국밥", "김치", "콜라" ],
+  "dietDate" : "2024-01-01"
 }</code></pre>
 </div>
 </div>
@@ -3351,11 +3338,6 @@ Host: localhost:8080
 </thead>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>dietId</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Number</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">식단ID</p></td>
-</tr>
-<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>username</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">회원ID</p></td>
@@ -3370,6 +3352,11 @@ Host: localhost:8080
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>Array</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">음식 리스트</p></td>
 </tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>dietDate</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">식단 날짜</p></td>
+</tr>
 </tbody>
 </table>
 </div>
@@ -3380,7 +3367,7 @@ Host: localhost:8080
 <h5 id="_응답_10_http_response">HTTP response</h5>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">HTTP/1.1 200 OK
+<pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">HTTP/1.1 400 Bad Request
 Vary: Origin
 Vary: Access-Control-Request-Method
 Vary: Access-Control-Request-Headers
@@ -3391,12 +3378,12 @@ Cache-Control: no-cache, no-store, max-age=0, must-revalidate
 Pragma: no-cache
 Expires: 0
 X-Frame-Options: DENY
-Content-Length: 97
+Content-Length: 146
 
 {
-  "status" : "성공",
-  "message" : "식단 수정에 성공하였습니다.",
-  "data" : ""
+  "status" : "실패",
+  "message" : "결과를 확인하고 다시시도해주세요.",
+  "data" : "회원정보를 찾을 수 없습니다."
 }</code></pre>
 </div>
 </div>
@@ -3438,21 +3425,23 @@ Content-Length: 97
 </div>
 </div>
 <div class="sect2">
-<h3 id="_식단_삭제_성공_api">식단 삭제 (성공) API</h3>
+<h3 id="_식단_수정_성공_api">식단 수정 (성공) API</h3>
 <div class="sect3">
 <h4 id="_요청_37">요청</h4>
 <div class="sect4">
 <h5 id="_요청_37_http_request">HTTP request</h5>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">DELETE /api/diets?_csrf=kjqxNc0aHheDPzCCx6kKgQzeXn7zkaYkLJyZVcQiifRWACJn8QKCDfp-ei-uXQix8oQ-5G24cx_CoJAJG6v_bPRB6MRvMUNT HTTP/1.1
+<pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">PATCH /api/diets?_csrf=AaBAqlzgo0oEGNfthRGYKRYbkec0pXL2B4TK7t1_trEz9WS4ZMNwzD7UlyspLeePvDysHXIjvN8GnUPbY7393b5I0tUHxACI HTTP/1.1
 Content-Type: application/json;charset=UTF-8
-Content-Length: 41
+Content-Length: 123
 Host: localhost:8080
 
 {
-  "id" : 100,
-  "username" : "testId"
+  "dietId" : 100,
+  "username" : "testId",
+  "mealType" : "BREAKFAST",
+  "foodNames" : [ "국밥", "김치", "콜라" ]
 }</code></pre>
 </div>
 </div>
@@ -3474,7 +3463,7 @@ Host: localhost:8080
 </thead>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>id</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>dietId</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>Number</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">식단ID</p></td>
 </tr>
@@ -3482,6 +3471,16 @@ Host: localhost:8080
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>username</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">회원ID</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>mealType</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">식단구분</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>foodNames</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Array</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">음식 리스트</p></td>
 </tr>
 </tbody>
 </table>
@@ -3508,7 +3507,7 @@ Content-Length: 97
 
 {
   "status" : "성공",
-  "message" : "식단 삭제에 성공하였습니다.",
+  "message" : "식단 수정에 성공하였습니다.",
   "data" : ""
 }</code></pre>
 </div>
@@ -3551,21 +3550,23 @@ Content-Length: 97
 </div>
 </div>
 <div class="sect2">
-<h3 id="_식단_삭제_실패_api">식단 삭제 (실패) API</h3>
+<h3 id="_식단_수정_실패_api">식단 수정 (실패) API</h3>
 <div class="sect3">
 <h4 id="_요청_38">요청</h4>
 <div class="sect4">
 <h5 id="_요청_38_http_request">HTTP request</h5>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">DELETE /api/diets?_csrf=kjqxNc0aHheDPzCCx6kKgQzeXn7zkaYkLJyZVcQiifRWACJn8QKCDfp-ei-uXQix8oQ-5G24cx_CoJAJG6v_bPRB6MRvMUNT HTTP/1.1
+<pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">PATCH /api/diets?_csrf=w204meBmIYM1fps1pHHNmCklzaniGbQ11vz7pvj5j2jGPxyzoA9cr9UEE-EYG6xWklz5qxsd4JCGLYYY78TIw8rMvQz-C3nW HTTP/1.1
 Content-Type: application/json;charset=UTF-8
-Content-Length: 41
+Content-Length: 123
 Host: localhost:8080
 
 {
-  "id" : 100,
-  "username" : "testId"
+  "dietId" : 100,
+  "username" : "testId",
+  "mealType" : "BREAKFAST",
+  "foodNames" : [ "국밥", "김치", "콜라" ]
 }</code></pre>
 </div>
 </div>
@@ -3587,7 +3588,7 @@ Host: localhost:8080
 </thead>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>id</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>dietId</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>Number</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">식단ID</p></td>
 </tr>
@@ -3595,6 +3596,16 @@ Host: localhost:8080
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>username</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">회원ID</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>mealType</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">식단구분</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>foodNames</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Array</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">음식 리스트</p></td>
 </tr>
 </tbody>
 </table>
@@ -3606,7 +3617,7 @@ Host: localhost:8080
 <h5 id="_응답_12_http_response">HTTP response</h5>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">HTTP/1.1 200 OK
+<pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">HTTP/1.1 400 Bad Request
 Vary: Origin
 Vary: Access-Control-Request-Method
 Vary: Access-Control-Request-Headers
@@ -3617,12 +3628,12 @@ Cache-Control: no-cache, no-store, max-age=0, must-revalidate
 Pragma: no-cache
 Expires: 0
 X-Frame-Options: DENY
-Content-Length: 97
+Content-Length: 146
 
 {
-  "status" : "성공",
-  "message" : "식단 삭제에 성공하였습니다.",
-  "data" : ""
+  "status" : "실패",
+  "message" : "결과를 확인하고 다시시도해주세요.",
+  "data" : "회원정보를 찾을 수 없습니다."
 }</code></pre>
 </div>
 </div>
@@ -3663,13 +3674,239 @@ Content-Length: 97
 </div>
 </div>
 </div>
+<div class="sect2">
+<h3 id="_식단_삭제_성공_api">식단 삭제 (성공) API</h3>
+<div class="sect3">
+<h4 id="_요청_39">요청</h4>
+<div class="sect4">
+<h5 id="_요청_39_http_request">HTTP request</h5>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">DELETE /api/diets?_csrf=90d1-4z-6VOFrvqxCLf8qpWAgS4DdcxmKTAuHRuNiSQwTOgZw3VEz76f0TWomM_UOJrInKLkrBYyFv9LEFYYLy3o70FRKtwq HTTP/1.1
+Content-Type: application/json;charset=UTF-8
+Content-Length: 41
+Host: localhost:8080
+
+{
+  "id" : 100,
+  "username" : "testId"
+}</code></pre>
+</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_요청_39_request_fields">Request fields</h5>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Path</th>
+<th class="tableblock halign-left valign-top">Type</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>id</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Number</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">식단ID</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>username</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">회원ID</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_응답_13">응답</h4>
+<div class="sect4">
+<h5 id="_응답_13_http_response">HTTP response</h5>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">HTTP/1.1 200 OK
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+Content-Type: application/json
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 0
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+X-Frame-Options: DENY
+Content-Length: 97
+
+{
+  "status" : "성공",
+  "message" : "식단 삭제에 성공하였습니다.",
+  "data" : ""
+}</code></pre>
+</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_응답_13_response_fields">Response fields</h5>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Path</th>
+<th class="tableblock halign-left valign-top">Type</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>status</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">처리 결과 상태</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>message</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">처리 메시지</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>data</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">처리 결과</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_식단_삭제_실패_api">식단 삭제 (실패) API</h3>
+<div class="sect3">
+<h4 id="_요청_40">요청</h4>
+<div class="sect4">
+<h5 id="_요청_40_http_request">HTTP request</h5>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">DELETE /api/diets?_csrf=W9hBjqUQhbTMkp6vq5BhCrfvc-mWQ8ADPXIvV6uMc8GaT7PVbep0vMMot4XhqvyYnb1VOtTdXouuJ6QuWBEYYc2_Q6CpeYPl HTTP/1.1
+Content-Type: application/json;charset=UTF-8
+Content-Length: 41
+Host: localhost:8080
+
+{
+  "id" : 100,
+  "username" : "testId"
+}</code></pre>
+</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_요청_40_request_fields">Request fields</h5>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Path</th>
+<th class="tableblock halign-left valign-top">Type</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>id</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Number</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">식단ID</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>username</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">회원ID</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_응답_14">응답</h4>
+<div class="sect4">
+<h5 id="_응답_14_http_response">HTTP response</h5>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">HTTP/1.1 400 Bad Request
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+Content-Type: application/json
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 0
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+X-Frame-Options: DENY
+Content-Length: 146
+
+{
+  "status" : "실패",
+  "message" : "결과를 확인하고 다시시도해주세요.",
+  "data" : "회원정보를 찾을 수 없습니다."
+}</code></pre>
+</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_응답_14_response_fields">Response fields</h5>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Path</th>
+<th class="tableblock halign-left valign-top">Type</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>status</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">처리 결과 상태</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>message</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">처리 메시지</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>data</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">처리 결과</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
 </div>
 </div>
 </div>
 <div id="footer">
 <div id="footer-text">
 Version 0.0.1-SNAPSHOT<br>
-Last updated 2024-07-14 21:18:08 +0900
+Last updated 2024-07-14 22:11:35 +0900
 </div>
 </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.3/highlight.min.js"></script>

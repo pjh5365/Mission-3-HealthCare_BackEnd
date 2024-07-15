@@ -29,16 +29,26 @@ operation::diet-controller-test/get-diet-by-id-test[snippets="http-response,resp
 operation::diet-controller-test/get-diet-by-id-fail-test[snippets="http-request,query-parameters"]
 ==== 응답
 operation::diet-controller-test/get-diet-by-id-fail-test[snippets="http-response,response-fields"]
+=== 이미지 저장 API
+==== 요청
+operation::diet-controller-test/save-image-test[snippets="http-request"]
+==== 응답
+operation::diet-controller-test/save-image-test[snippets="http-response,response-fields"]
 === 식단 추가 (성공) API
 ==== 요청
 operation::diet-controller-test/add-diet-test[snippets="http-request,request-fields"]
 ==== 응답
 operation::diet-controller-test/add-diet-test[snippets="http-response,response-fields"]
+=== 식단 추가 (성공 - 이미지) API
+==== 요청
+operation::diet-controller-test/add-diet-with-image-test[snippets="http-request,request-fields"]
+==== 응답
+operation::diet-controller-test/add-diet-with-image-test[snippets="http-response,response-fields"]
 === 식단 추가 (실패) API
 ==== 요청
-operation::diet-controller-test/add-diet-test[snippets="http-request,request-fields"]
+operation::diet-controller-test/add-diet-fail-test[snippets="http-request,request-fields"]
 ==== 응답
-operation::diet-controller-test/add-diet-test[snippets="http-response,response-fields"]
+operation::diet-controller-test/add-diet-fail-test[snippets="http-response,response-fields"]
 === 식단 수정 (성공) API
 ==== 요청
 operation::diet-controller-test/update-diet-test[snippets="http-request,request-fields"]
@@ -46,9 +56,9 @@ operation::diet-controller-test/update-diet-test[snippets="http-request,request-
 operation::diet-controller-test/update-diet-test[snippets="http-response,response-fields"]
 === 식단 수정 (실패) API
 ==== 요청
-operation::diet-controller-test/update-diet-test[snippets="http-request,request-fields"]
+operation::diet-controller-test/update-diet-fail-test[snippets="http-request,request-fields"]
 ==== 응답
-operation::diet-controller-test/update-diet-test[snippets="http-response,response-fields"]
+operation::diet-controller-test/update-diet-fail-test[snippets="http-response,response-fields"]
 === 식단 삭제 (성공) API
 ==== 요청
 operation::diet-controller-test/delete-diet-test[snippets="http-request,request-fields"]
@@ -56,6 +66,6 @@ operation::diet-controller-test/delete-diet-test[snippets="http-request,request-
 operation::diet-controller-test/delete-diet-test[snippets="http-response,response-fields"]
 === 식단 삭제 (실패) API
 ==== 요청
-operation::diet-controller-test/delete-diet-test[snippets="http-request,request-fields"]
+operation::diet-controller-test/delete-diet-fail-test[snippets="http-request,request-fields"]
 ==== 응답
-operation::diet-controller-test/delete-diet-test[snippets="http-response,response-fields"]
+operation::diet-controller-test/delete-diet-fail-test[snippets="http-response,response-fields"]
