@@ -24,9 +24,11 @@ import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.data.jpa.mapping.JpaMetamodelMappingContext;
 import org.springframework.http.MediaType;
+import org.springframework.mock.web.MockMultipartFile;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.test.context.support.WithMockUser;
 import org.springframework.test.web.servlet.MockMvc;
+import org.springframework.web.multipart.MultipartFile;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -45,6 +47,7 @@ import kakao.mission3healthcare_backend.diet.domain.dto.request.SaveFoodRequest;
 import kakao.mission3healthcare_backend.diet.domain.dto.response.DietResponse;
 import kakao.mission3healthcare_backend.diet.domain.dto.response.FoodInfo;
 import kakao.mission3healthcare_backend.diet.domain.dto.response.NutrientResponse;
+import kakao.mission3healthcare_backend.diet.service.DietImageService;
 import kakao.mission3healthcare_backend.diet.service.DietService;
 import kakao.mission3healthcare_backend.diet.service.FoodMenuService;
 
@@ -61,6 +64,7 @@ class DietControllerTest {
 
 	@Autowired MockMvc mockMvc;
 	@MockBean DietService dietService;
+	@MockBean DietImageService dietImageService;
 	@MockBean FoodMenuService foodMenuService;
 
 	/**
@@ -404,10 +408,36 @@ class DietControllerTest {
 	}
 
 	@Test
+	@DisplayName("사진 저장 테스트")
+	void saveImageTest() throws Exception {
+		// Given
+		MockMultipartFile file = new MockMultipartFile("images", "Test.png", "image/png", "사진내용".getBytes());
+		given(dietImageService.saveFile(any(), any())).willReturn("UUID:Test.png");
+
+		// When
+		mockMvc.perform(
+						multipart("/api/diets/images")
+								.file(file)
+								.with(csrf()))
+				.andExpect(status().isOk())
+				.andDo(print())
+				.andDo(document("{class-name}/{method-name}/",
+						preprocessRequest(prettyPrint()),
+						preprocessResponse(prettyPrint()),
+						responseFields(
+								fieldWithPath("status").description("처리 결과 상태"),
+								fieldWithPath("message").description("처리 메시지"),
+								fieldWithPath("data").description("저장된 이미지 파일명")
+						)));
+
+		// Then
+	}
+
+	@Test
 	@DisplayName("식단 추가 테스트 (성공)")
 	void addDietTest() throws Exception {
 		// Given
-		DietRequest request = new DietRequest("testId", MealType.BREAKFAST, List.of("국밥", "김치", "콜라"), LocalDate.of(2024, 1, 1));
+		DietRequest request = new DietRequest("testId", MealType.BREAKFAST, List.of("국밥", "김치", "콜라"), LocalDate.of(2024, 1, 1), null);
 
 		// When
 		mockMvc.perform(post("/api/diets")
@@ -436,10 +466,42 @@ class DietControllerTest {
 	}
 
 	@Test
+	@DisplayName("식단 추가 테스트 (성공 - 이미지)")
+	void addDietWithImageTest() throws Exception {
+		// Given
+		DietRequest request = new DietRequest("testId", MealType.BREAKFAST, null, LocalDate.of(2024, 1, 1), "UUID:test.png");
+
+		// When
+		mockMvc.perform(post("/api/diets")
+						.with(csrf())
+						.contentType(MediaType.APPLICATION_JSON)
+						.content(gson.toJson(request)))
+				.andExpect(status().isOk())
+				.andDo(print())
+				.andDo(document("{class-name}/{method-name}/",
+						preprocessRequest(prettyPrint()),
+						preprocessResponse(prettyPrint()),
+						requestFields(
+								fieldWithPath("username").description("회원ID"),
+								fieldWithPath("mealType").description("식단구분"),
+								fieldWithPath("dietDate").description("식단 날짜"),
+								fieldWithPath("imageName").description("서버에 저장된 이미지 파일명")
+						),
+						responseFields(
+								fieldWithPath("status").description("처리 결과 상태"),
+								fieldWithPath("message").description("처리 메시지"),
+								fieldWithPath("data").description("처리 결과")
+						)));
+
+		// Then
+		verify(dietService).addDiet(any());
+	}
+
+	@Test
 	@DisplayName("식단 추가 테스트 (실패)")
 	void addDietFailTest() throws Exception {
 		// Given
-		DietRequest request = new DietRequest("testId", MealType.BREAKFAST, List.of("국밥", "김치", "콜라"), LocalDate.of(2024, 1, 1));
+		DietRequest request = new DietRequest("testId", MealType.BREAKFAST, List.of("국밥", "김치", "콜라"), LocalDate.of(2024, 1, 1), null);
 		doThrow(new UsernameNotFoundException("회원정보를 찾을 수 없습니다.")).when(dietService).addDiet(any());
 
 		// When

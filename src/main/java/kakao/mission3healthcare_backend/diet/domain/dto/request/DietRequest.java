@@ -21,4 +21,5 @@ public class DietRequest {
 	private MealType mealType; // 식단 구분
 	private List<String> foodNames; // 먹은 음식리스트
 	private LocalDate dietDate; // 식단 날짜
+	private String imageName; // 사진 파일명
 }

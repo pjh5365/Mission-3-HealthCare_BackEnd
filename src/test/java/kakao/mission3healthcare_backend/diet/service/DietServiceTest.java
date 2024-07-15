@@ -16,7 +16,6 @@ import org.mockito.junit.jupiter.MockitoExtension;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 
 import kakao.mission3healthcare_backend.auth.domain.entity.Member;
-import kakao.mission3healthcare_backend.auth.repository.MemberRepository;
 import kakao.mission3healthcare_backend.common.service.CommonService;
 import kakao.mission3healthcare_backend.diet.domain.MealType;
 import kakao.mission3healthcare_backend.diet.domain.NutrientType;
@@ -30,6 +29,7 @@ import kakao.mission3healthcare_backend.diet.domain.entity.Diet;
 import kakao.mission3healthcare_backend.diet.domain.entity.Food;
 import kakao.mission3healthcare_backend.diet.domain.entity.FoodMenu;
 import kakao.mission3healthcare_backend.diet.domain.entity.Nutrient;
+import kakao.mission3healthcare_backend.diet.repository.DietImageRepository;
 import kakao.mission3healthcare_backend.diet.repository.DietRepository;
 import kakao.mission3healthcare_backend.diet.repository.FoodRepository;
 import kakao.mission3healthcare_backend.diet.repository.NutrientRepository;
@@ -45,6 +45,7 @@ class DietServiceTest {
 	@InjectMocks DietService dietService;
 	@Mock CommonService commonService;
 	@Mock DietRepository dietRepository;
+	@Mock DietImageRepository dietImageRepository;
 	@Mock FoodRepository foodRepository;
 	@Mock NutrientRepository nutrientRepository;
 
@@ -52,7 +53,7 @@ class DietServiceTest {
 	@DisplayName("식단 추가 테스트 (실패 - 회원정보를 찾을 수 없음)")
 	void addDietFail() {
 	    // Given
-		DietRequest dietRequest = new DietRequest("testId", MealType.BREAKFAST, List.of("김치", "라면"), LocalDate.of(2024, 1, 1));
+		DietRequest dietRequest = new DietRequest("testId", MealType.BREAKFAST, List.of("김치", "라면"), LocalDate.of(2024, 1, 1), null);
 		given(commonService.findMember("testId", true)).willThrow(new UsernameNotFoundException("회원정보를 찾을 수 없습니다."));
 
 	    // When
@@ -68,7 +69,7 @@ class DietServiceTest {
 	@DisplayName("식단 추가 테스트 (성공)")
 	void addDiet() {
 	    // Given
-		DietRequest dietRequest = new DietRequest("testId", MealType.BREAKFAST, List.of("김치", "라면"), LocalDate.of(2024, 1, 1));
+		DietRequest dietRequest = new DietRequest("testId", MealType.BREAKFAST, List.of("김치", "라면"), LocalDate.of(2024, 1, 1), null);
 		Member member = Member.builder().username("testId").build();
 		given(commonService.findMember("testId", true)).willReturn(member);
 
@@ -79,6 +80,24 @@ class DietServiceTest {
 		verify(commonService).findMember("testId", true);
 		verify(dietRepository).save(any());
 		verify(foodRepository, times(2)).save(any());
+	}
+
+	@Test
+	@DisplayName("식단 추가 테스트 (성공 - 이미지)")
+	void addDietImage() {
+		// Given
+		DietRequest dietRequest = new DietRequest("testId", MealType.BREAKFAST, null, LocalDate.of(2024, 1, 1), "test.png");
+		Member member = Member.builder().username("testId").build();
+		given(commonService.findMember("testId", true)).willReturn(member);
+
+		// When
+		assertDoesNotThrow(() -> dietService.addDiet(dietRequest));
+
+		// Then
+		verify(commonService).findMember("testId", true);
+		verify(dietRepository).save(any());
+		verify(foodRepository, never()).save(any());
+		verify(dietImageRepository).save(any());
 	}
 
 	// 수정 성공
