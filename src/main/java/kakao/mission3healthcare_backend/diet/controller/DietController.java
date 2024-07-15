@@ -2,6 +2,9 @@ package kakao.mission3healthcare_backend.diet.controller;
 
 import java.time.LocalDate;
 
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PatchMapping;
@@ -10,6 +13,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.multipart.MultipartFile;
 
 import kakao.mission3healthcare_backend.common.response.ApiMultiResponse;
 import kakao.mission3healthcare_backend.common.response.ApiSingleResponse;
@@ -18,6 +22,7 @@ import kakao.mission3healthcare_backend.diet.domain.dto.request.DietRequest;
 import kakao.mission3healthcare_backend.diet.domain.dto.request.DietUpdateRequest;
 import kakao.mission3healthcare_backend.diet.domain.dto.request.SaveFoodRequest;
 import kakao.mission3healthcare_backend.diet.domain.dto.response.DietResponse;
+import kakao.mission3healthcare_backend.diet.service.DietImageService;
 import kakao.mission3healthcare_backend.diet.service.DietService;
 import kakao.mission3healthcare_backend.diet.service.FoodMenuService;
 import lombok.RequiredArgsConstructor;
@@ -28,7 +33,11 @@ import lombok.RequiredArgsConstructor;
 public class DietController {
 
 	private final DietService dietService;
+	private final DietImageService dietImageService;
 	private final FoodMenuService foodMenuService;
+
+	@Value("${IMAGES_SAVE_PATH}")
+	private String PATH;
 
 	/**
 	 * 음식 검색 API
@@ -36,8 +45,9 @@ public class DietController {
 	 * @return 처리결과
 	 */
 	@GetMapping("/foods")
-	public ApiMultiResponse<String> getFoods() {
-		return new ApiMultiResponse<>("성공", "현재 저장되어 있는 음식메뉴들", foodMenuService.getFood());
+	public ResponseEntity<ApiMultiResponse<String>> getFoods() {
+		return ResponseEntity.status(HttpStatus.OK)
+				.body(new ApiMultiResponse<>("성공", "현재 저장되어 있는 음식메뉴들", foodMenuService.getFood()));
 	}
 
 	/**
@@ -47,10 +57,11 @@ public class DietController {
 	 * @return 처리결과
 	 */
 	@PostMapping("/foods")
-	public ApiSingleResponse<String> addFood(@RequestBody SaveFoodRequest saveFoodRequest) {
+	public ResponseEntity<ApiSingleResponse<String>> addFood(@RequestBody SaveFoodRequest saveFoodRequest) {
 		foodMenuService.saveFoodMenu(saveFoodRequest);
 
-		return new ApiSingleResponse<>("성공", "음식 메뉴 추가에 성공하였습니다.", "");
+		return ResponseEntity.status(HttpStatus.OK)
+				.body(new ApiSingleResponse<>("성공", "음식 메뉴 추가에 성공하였습니다.", ""));
 	}
 
 	/**
@@ -60,8 +71,9 @@ public class DietController {
 	 * @return 식단 정보
 	 */
 	@GetMapping("/diets/{username}")
-	public ApiMultiResponse<DietResponse> getDiets(@PathVariable String username) {
-		return new ApiMultiResponse<>("성공", username + "의 식단 정보입니다.", dietService.getDiets(username));
+	public ResponseEntity<ApiMultiResponse<DietResponse>> getDiets(@PathVariable String username) {
+		return ResponseEntity.status(HttpStatus.OK)
+				.body(new ApiMultiResponse<>("성공", username + "의 식단 정보입니다.", dietService.getDiets(username)));
 	}
 
 	/**
@@ -72,11 +84,12 @@ public class DietController {
 	 * @return 식단 정보
 	 */
 	@GetMapping("/diets/{username}/{date}")
-	public ApiMultiResponse<DietResponse> getDietByUsernameAndDate(@PathVariable String username,
+	public ResponseEntity<ApiMultiResponse<DietResponse>> getDietByUsernameAndDate(@PathVariable String username,
 			@PathVariable LocalDate date) {
 
-		return new ApiMultiResponse<>("성공", username + "의 식단 정보입니다.",
-				dietService.getDietByUsernameAndDate(username, date));
+		return ResponseEntity.status(HttpStatus.OK)
+				.body(new ApiMultiResponse<>("성공", username + "의 식단 정보입니다.",
+						dietService.getDietByUsernameAndDate(username, date)));
 	}
 
 	/**
@@ -86,9 +99,22 @@ public class DietController {
 	 * @return 식단 정보
 	 */
 	@GetMapping("/diets")
-	public ApiSingleResponse<DietResponse> getDiet(Long id) {
-		return new ApiSingleResponse<>("성공", "식단 정보입니다.",
-				dietService.getDietById(id));
+	public ResponseEntity<ApiSingleResponse<DietResponse>> getDiet(Long id) {
+		return ResponseEntity.status(HttpStatus.OK)
+				.body(new ApiSingleResponse<>("성공", "식단 정보입니다.",
+						dietService.getDietById(id)));
+	}
+
+	/**
+	 * 식단 이미지 추가 API
+	 *
+	 * @param image 식단 이미지
+	 * @return
+	 */
+	@PostMapping("/diets/images")
+	public ResponseEntity<ApiSingleResponse<String>> saveImage(MultipartFile image) {
+		return ResponseEntity.status(HttpStatus.OK)
+				.body(new ApiSingleResponse<>("성공", "저장된 이미지 파일명입니다.", dietImageService.saveFile(image, PATH)));
 	}
 
 	/**
@@ -98,9 +124,10 @@ public class DietController {
 	 * @return 처리결과
 	 */
 	@PostMapping("/diets")
-	public ApiSingleResponse<String> addDiet(@RequestBody DietRequest dietRequest) {
+	public ResponseEntity<ApiSingleResponse<String>> addDiet(@RequestBody DietRequest dietRequest) {
 		dietService.addDiet(dietRequest);
-		return new ApiSingleResponse<>("성공", "식단 추가에 성공하였습니다.", "");
+		return ResponseEntity.status(HttpStatus.OK)
+				.body(new ApiSingleResponse<>("성공", "식단 추가에 성공하였습니다.", ""));
 	}
 
 	/**
@@ -110,9 +137,10 @@ public class DietController {
 	 * @return 처리결과
 	 */
 	@PatchMapping("/diets")
-	public ApiSingleResponse<String> updateDiet(@RequestBody DietUpdateRequest updateRequest) {
+	public ResponseEntity<ApiSingleResponse<String>> updateDiet(@RequestBody DietUpdateRequest updateRequest) {
 		dietService.updateDiet(updateRequest);
-		return new ApiSingleResponse<>("성공", "식단 수정에 성공하였습니다.", "");
+		return ResponseEntity.status(HttpStatus.OK)
+				.body(new ApiSingleResponse<>("성공", "식단 수정에 성공하였습니다.", ""));
 	}
 
 	/**
@@ -122,8 +150,9 @@ public class DietController {
 	 * @return 처리결과
 	 */
 	@DeleteMapping("/diets")
-	public ApiSingleResponse<String> deleteDiet(@RequestBody DietDeleteRequest deleteRequest) {
+	public ResponseEntity<ApiSingleResponse<String>> deleteDiet(@RequestBody DietDeleteRequest deleteRequest) {
 		dietService.deleteDiet(deleteRequest);
-		return new ApiSingleResponse<>("성공", "식단 삭제에 성공하였습니다.", "");
+		return ResponseEntity.status(HttpStatus.OK)
+				.body(new ApiSingleResponse<>("성공", "식단 삭제에 성공하였습니다.", ""));
 	}
 }
