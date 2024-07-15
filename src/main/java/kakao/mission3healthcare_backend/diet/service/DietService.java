@@ -15,8 +15,10 @@ import kakao.mission3healthcare_backend.diet.domain.dto.response.DietResponse;
 import kakao.mission3healthcare_backend.diet.domain.dto.response.FoodInfo;
 import kakao.mission3healthcare_backend.diet.domain.dto.response.NutrientResponse;
 import kakao.mission3healthcare_backend.diet.domain.entity.Diet;
+import kakao.mission3healthcare_backend.diet.domain.entity.DietImage;
 import kakao.mission3healthcare_backend.diet.domain.entity.Food;
 import kakao.mission3healthcare_backend.diet.domain.entity.Nutrient;
+import kakao.mission3healthcare_backend.diet.repository.DietImageRepository;
 import kakao.mission3healthcare_backend.diet.repository.DietRepository;
 import kakao.mission3healthcare_backend.diet.repository.FoodRepository;
 import kakao.mission3healthcare_backend.diet.repository.NutrientRepository;
@@ -34,6 +36,7 @@ public class DietService {
 
 	private final CommonService commonService;
 	private final DietRepository dietRepository;
+	private final DietImageRepository dietImageRepository;
 	private final FoodRepository foodRepository;
 	private final NutrientRepository nutrientRepository;
 
@@ -104,14 +107,18 @@ public class DietService {
 				.build();
 
 		dietRepository.save(diet);
+		if (dietRequest.getImageName() != null) { // 이미지가 업로드 되었다면 기본적인 식단 정보와 이미지 저장
+			saveImage(dietRequest.getImageName(), diet);
+		} else { // 이미지가 업로드 되지 않았다면 기본적인 식단 정보와 음식메뉴들 수동저장
+			dietRequest.getFoodNames()
+					.forEach(f -> foodRepository.save(
+							Food.builder()
+									.diet(diet)
+									.foodName(f)
+									.build()
+					));
+		}
 
-		dietRequest.getFoodNames()
-				.forEach(f -> foodRepository.save(
-						Food.builder()
-								.diet(diet)
-								.foodName(f)
-								.build()
-				));
 	}
 
 	/**
@@ -185,5 +192,16 @@ public class DietService {
 	 */
 	private NutrientResponse nutrientToDto(Nutrient nutrient) {
 		return new NutrientResponse(nutrient.getNutrientType(), nutrient.getAmount());
+	}
+
+	/**
+	 * 이미지 정보를 DB에 저장하는 메서드
+	 *
+	 * @param imageName 이미지 파일명
+	 * @param diet 식단
+	 */
+	private void saveImage(String imageName, Diet diet) {
+		DietImage dietImage = DietImage.builder().imageName(imageName).diet(diet).build();
+		dietImageRepository.save(dietImage);
 	}
 }
