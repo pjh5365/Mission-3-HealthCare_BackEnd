@@ -485,6 +485,20 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_식단_삭제_실패_api">식단 삭제 (실패) API</a></li>
 </ul>
 </li>
+<li><a href="#_활동_api_activitycontroller">활동 API (ActivityController)</a>
+<ul class="sectlevel2">
+<li><a href="#_한_회원의_걷기_정보_조회_api">한 회원의 걷기 정보 조회 API</a></li>
+<li><a href="#_한_회원의_하루_걷기_정보_조회_api">한 회원의 하루 걷기 정보 조회 API</a></li>
+<li><a href="#_하나의_걷기_정보_조회_성공_api">하나의 걷기 정보 조회 (성공) API</a></li>
+<li><a href="#_하나의_걷기_정보_조회_실패_api">하나의 걷기 정보 조회 (실패) API</a></li>
+<li><a href="#_걷기_정보_추가_성공_api">걷기 정보 추가 (성공) API</a></li>
+<li><a href="#_걷기_정보_추가_실패_api">걷기 정보 추가 (실패) API</a></li>
+<li><a href="#_걷기_정보_수정_성공_api">걷기 정보 수정 (성공) API</a></li>
+<li><a href="#_걷기_정보_수정_실패_api">걷기 정보 수정 (실패) API</a></li>
+<li><a href="#_걷기_정보_삭제_성공_api">걷기 정보 삭제 (성공) API</a></li>
+<li><a href="#_걷기_정보_삭제_실패_api">걷기 정보 삭제 (실패) API</a></li>
+</ul>
+</li>
 </ul>
 </div>
 </div>
@@ -500,7 +514,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <h5 id="_요청_http_request">HTTP request</h5>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">POST /api/users?_csrf=AZBQyJ1N96WjWwyDLza4soEwrNtxkj7Uuj3edsfp2ZXmArhlNKc28Pgrx5GOaDSwGRuM1rMDgbkVog353w7nFfXb6_HWYIwG HTTP/1.1
+<pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">POST /api/users?_csrf=8EuzzSR21-cOf7EH2qyu2ZVzHL39YVvGH9gSHcgq4kOD01TiyS-Lrx1C5NUjGYM-6oGa4fZFMYXEBWjrKuEnKPob1XbnsGfX HTTP/1.1
 Content-Type: application/json;charset=UTF-8
 Content-Length: 74
 Host: localhost:8080
@@ -627,7 +641,7 @@ Content-Length: 151
 <h5 id="_요청_3_http_request">HTTP request</h5>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">POST /api/users?_csrf=8h0Hygt6wWvJCm34twhPxQzTH54CEp30BscCBaZC2gBSE0kfwClh-jhI9w_kbwjA1iV78TjrMvw7dqXZYvdgMcIg6jJhJ3F5 HTTP/1.1
+<pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">POST /api/users?_csrf=YgY-nQm9MW67xwPhk4D8emBwjCGLQJtUWOdZhaS9oUDXkQcMAzEJqD7YUl6W_jSDpK3IH1NCoUO4Jax5OoJvspDZwHnkqWNv HTTP/1.1
 Content-Type: application/json;charset=UTF-8
 Content-Length: 74
 Host: localhost:8080
@@ -746,7 +760,7 @@ Content-Length: 138
 <h5 id="_요청_5_http_request">HTTP request</h5>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">PATCH /api/users?_csrf=fF23JLwl6GKcfEM2zo0M04YOHY4IlyoDnBbxN_K5Y7CGkYppSDyOQI0V2AaxSnoE_6A44OU4MLY_8houryWQVpTaUtG-9LkI HTTP/1.1
+<pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">PATCH /api/users?_csrf=yYXbR3fB8DoZytdS3FMe0RGm9lH7cqVT17CFoOPkWyfKPYvfr-TudUekxwg08uFg5H4q5ifC22nKR8F-sYawwoHUOBP6BLm9 HTTP/1.1
 Content-Type: application/json;charset=UTF-8
 Content-Length: 51
 Host: localhost:8080
@@ -867,7 +881,7 @@ Content-Length: 158
 <h5 id="_요청_7_http_request">HTTP request</h5>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">PATCH /api/users?_csrf=hI6khnIQ33Qt5sKhuJq-H9DtDvOciA6fizUF189GvnfB8Rz4vLucsxEl6kcAhfWSireKLbTbI8v4vjay6QY94qtxh0b3xSnN HTTP/1.1
+<pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">PATCH /api/users?_csrf=9X0a0d0pHzKNYNizWtCB6EUbIqQ34_2Xj3H_dxwDMX6c220uxBx-4-scLgGgWOmHbv2123d_D5xSgcy6uBPKRyRhAxj5uVwa HTTP/1.1
 Content-Type: application/json;charset=UTF-8
 Content-Length: 51
 Host: localhost:8080
@@ -980,7 +994,7 @@ Content-Length: 153
 <h5 id="_요청_9_http_request">HTTP request</h5>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">PATCH /api/users?_csrf=_IdpxDewotVHQi_GA-Xp-ReHHxTP9uMLdSYAV-lWhU-YorK-xOVZ8gGDw-xqIRinYMjdwC-zMnb9k9UmQhQ0Z9Azsyyqm4WJ HTTP/1.1
+<pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">PATCH /api/users?_csrf=YOd86ZbusC1xJelxkdMssI9sjfllVdVIJfWTazMFrZULoD0PU9ZN2a_W1B9cEYtJ8_4Y1OxVoJhQN-JlQMbxCApjnaE9lAo_ HTTP/1.1
 Content-Type: application/json;charset=UTF-8
 Content-Length: 82
 Host: localhost:8080
@@ -1107,7 +1121,7 @@ Content-Length: 158
 <h5 id="_요청_11_http_request">HTTP request</h5>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">PATCH /api/users?_csrf=CwEHIP4wnweisO-gJGYnTtNNz3w4Av3dQWHtubXbN2exHysqMzEyQZoAqmOPhIuVHEsTebcr4h5eZs7wIlfbgYDuAVWCfE8S HTTP/1.1
+<pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">PATCH /api/users?_csrf=57M_QiIYzoSg3yESXH7MCtE5_IPsWhI8QIMkERRL9T2bxYPD3tJacEd7quWN6BMla1P4b7Vd0bvcbSURJeJCI3Eowg359LWh HTTP/1.1
 Content-Type: application/json;charset=UTF-8
 Content-Length: 82
 Host: localhost:8080
@@ -1226,7 +1240,7 @@ Content-Length: 153
 <h5 id="_요청_13_http_request">HTTP request</h5>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">PATCH /api/users?_csrf=ijtEDyv86XiUg5OhmIU0PastcSXuw7Cm67wSGekIXIbTo10VvQl1PRLN3h65u6DD-agAD5pMXB2NotKL24ogfI86OeLhkT8i HTTP/1.1
+<pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">PATCH /api/users?_csrf=Q0SEjEURWj4og8_j3X_KLXgtMZc2sleAKCwFhMfpYfu4VGntcHy9vHUgYwkFsPiCv1L-HE0dHPUHi2CtERVgtqbeWZjaZwrd HTTP/1.1
 Content-Type: application/json;charset=UTF-8
 Content-Length: 82
 Host: localhost:8080
@@ -1345,7 +1359,7 @@ Content-Length: 148
 <h5 id="_요청_15_http_request">HTTP request</h5>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">POST /api/users/details?_csrf=DR9R_k7WPIFOrtt3qCj3gBOv23JZmi4c5t3ZwmBy2xUVSvQHOS1kzSziD7BjyuoVmwXDuSSe9hBoqRgx1-vh9QZD6XchKZY- HTTP/1.1
+<pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">POST /api/users/details?_csrf=y-1uWqxHj_ru69g_vC5yCCnzfVaSohJRw34UA6dBRpalHeWD-I5ZP51wuc_Djr0O2gNGPUzAUG-lliN88k0nM5MjdvCdKNax HTTP/1.1
 Content-Type: application/json;charset=UTF-8
 Content-Length: 50
 Host: localhost:8080
@@ -1466,7 +1480,7 @@ Content-Length: 163
 <h5 id="_요청_17_http_request">HTTP request</h5>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">POST /api/users/details?_csrf=DR9R_k7WPIFOrtt3qCj3gBOv23JZmi4c5t3ZwmBy2xUVSvQHOS1kzSziD7BjyuoVmwXDuSSe9hBoqRgx1-vh9QZD6XchKZY- HTTP/1.1
+<pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">POST /api/users/details?_csrf=y-1uWqxHj_ru69g_vC5yCCnzfVaSohJRw34UA6dBRpalHeWD-I5ZP51wuc_Djr0O2gNGPUzAUG-lliN88k0nM5MjdvCdKNax HTTP/1.1
 Content-Type: application/json;charset=UTF-8
 Content-Length: 50
 Host: localhost:8080
@@ -1592,7 +1606,7 @@ Content-Length: 163
 <h5 id="_요청_19_http_request">HTTP request</h5>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">POST /api/login?_csrf=yXbewADRWxdFJaO1XN9c86Tm4yEp6ro7swQXE5A-bUjHvTlAqE7r8jTmPyRoRpuNPvJowMLfzhkY2I0W1TN2IqZfXyqmj1wk HTTP/1.1
+<pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">POST /api/login?_csrf=cuZXoTPIyRB1ltXwvWWczJxGEY7fK0zYDgRDTUy4b3tpZuy2FNY2wgb-qydYoOaW3kior6wlPO_tSn_1PTd7KHqLWUxRA92A HTTP/1.1
 Content-Type: application/json;charset=UTF-8
 Content-Length: 50
 Host: localhost:8080
@@ -1664,7 +1678,7 @@ Location: https://www.kakaocorp.com/</code></pre>
 <h5 id="_요청_21_http_request">HTTP request</h5>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">POST /api/login?_csrf=pLuBIs9t7unw8GhqFjbWXgpilCa3KZ2STl9a0AhZKcaKiSgHnd63FfkP1ozdlApaJRvibzgBuR6GEfy_dmk-4TBqHva5uhBl HTTP/1.1
+<pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">POST /api/login?_csrf=z6GSkwsKOt5lhJzysLpPJnwIznkdT3n9oTpKTu6RXL_SaSVm-Jej9mpuWe9I4K6WhJd7HkVs40Eqdk7QlQl6eY_1P4nnXhQH HTTP/1.1
 Content-Type: application/json;charset=UTF-8
 Content-Length: 50
 Host: localhost:8080
@@ -1777,7 +1791,7 @@ Content-Length: 184
 <h5 id="_요청_23_http_request">HTTP request</h5>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">POST /api/login?_csrf=FoZ7UxWeI5BpIRXPQ2KvfjLwFWG56dny8D20XNhn34_y3c3fIeBKaiSuEfZEQnascE-bSQrCOFmK3rzfyF_RP-tW7OrDvqu- HTTP/1.1
+<pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">POST /api/login?_csrf=2BllT-2TTupJ4qIGl4Fj1j2VACbJDTWbBe7GlrK_Ke9b9FTGuixWLt6meN9k0JM_9qxX4VmiLUSqb1S2Pdin8oqKEIxskG3- HTTP/1.1
 Content-Type: application/json;charset=UTF-8
 Content-Length: 50
 Host: localhost:8080
@@ -1895,7 +1909,7 @@ Content-Type: application/x-www-form-urlencoded
 Host: localhost:8080
 Content-Length: 102
 
-_csrf=JDy0GZ3C7L3Bnka_V6HnL7Ij9WYRLXVdhUqy9Z9yanLlO1EIRl_WIP7x243sq3-OYYzTToUR2AciGUVws3_XkK0UC0aHAzU9</code></pre>
+_csrf=8pY_0q9nT8MFG5R-NueZuOftX1DDqvoXg5CswzLuLrx-C45lx_cM55gEKfooeKcfB8qtiNTdcjL6k5g6tKTN8wLcTYscM7lW</code></pre>
 </div>
 </div>
 </div>
@@ -2012,7 +2026,7 @@ Content-Length: 169
 <h5 id="_요청_28_http_request">HTTP request</h5>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">POST /api/foods?_csrf=Erg8oEy1G7dBkGJ4OpaIa1a7LfukrE6kSh6vHPtnTM1V8j9dI45YkSiDLYVsqARICLu8DmSJAMKdynuJeCmYeJ8CdatsxQo7 HTTP/1.1
+<pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">POST /api/foods?_csrf=5FKa4lXE1QpnHrOH-gVXbn38UUlvug0Jg-GvNOPf-QTUYmFx1GWvhG30tzhKKIG2yShjWEjOfCta2z0ksoCZA9PnnGDmUFMV HTTP/1.1
 Content-Type: application/json;charset=UTF-8
 Content-Length: 223
 Host: localhost:8080
@@ -3057,7 +3071,7 @@ Content-Length: 110
 <h5 id="_요청_34_http_request">HTTP request</h5>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">POST /api/diets?_csrf=ItP6-l8OjYGxTP5yMuFjSZ7rdiJIL2n_fu9PHxR995GF4HJAR7WfmGY9teecLs1EUcxXcaiKW0NxTQzSSNh5Jy1NzqK11UUh HTTP/1.1
+<pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">POST /api/diets?_csrf=mp_n4tACi-1Co5S4NzCv4MyawU8XgyZs_QdBxYel83nF-W0Iovzf1LU3u4tvl6LdBh2b0Pz77C4huhJBzD5wpOLHkkjyylU9 HTTP/1.1
 Content-Type: application/json;charset=UTF-8
 Content-Length: 134
 Host: localhost:8080
@@ -3182,7 +3196,7 @@ Content-Length: 97
 <h5 id="_요청_35_http_request">HTTP request</h5>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">POST /api/diets?_csrf=Qrw7nsWZMDh1zD4q_Vnp6Kn-lFsPsTD_BFIfV0r0YZCDXeHwdIxZqvegBwlYrggamHTd2c3KuTlp0wnSN2AnMyuRBPPiOdKR HTTP/1.1
+<pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">POST /api/diets?_csrf=ToffhnDqy7Bft36BjTzoU7kmEzUgY43fQKZHH6qAUILBg3SOKOa-4ETYrYFyg0-x6RHcMthEPgwUVrzycpJ3L5_mM7Cg4ES- HTTP/1.1
 Content-Type: application/json;charset=UTF-8
 Content-Length: 117
 Host: localhost:8080
@@ -3307,7 +3321,7 @@ Content-Length: 97
 <h5 id="_요청_36_http_request">HTTP request</h5>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">POST /api/diets?_csrf=FUU1hnupsPaXTBIV_RycCxCMiZoHtLMLFSmZVsNg6I4yK560LHIGthmchJS6KnYgmDGoMifppPg3hYsmdh-vY_UB2bdQHKmN HTTP/1.1
+<pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">POST /api/diets?_csrf=qH7_rp00F3ldDl3aL7zDzAPdmj8CbgbJ-ZVzrcXHga8N_pVjmxzLmqkMJElwbGi-S5H3-WXvtwYyWTHkwKxLlaClt5c7n61U HTTP/1.1
 Content-Type: application/json;charset=UTF-8
 Content-Length: 134
 Host: localhost:8080
@@ -3432,7 +3446,7 @@ Content-Length: 146
 <h5 id="_요청_37_http_request">HTTP request</h5>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">PATCH /api/diets?_csrf=AaBAqlzgo0oEGNfthRGYKRYbkec0pXL2B4TK7t1_trEz9WS4ZMNwzD7UlyspLeePvDysHXIjvN8GnUPbY7393b5I0tUHxACI HTTP/1.1
+<pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">PATCH /api/diets?_csrf=FGnTzvV11ixWewcMT22NgXwUQPBpuRVwqnf8JC5jFBB2qwq1dlixq8JH4Rt7ST85fkC5508mbZJYiXFdmEeeRk1QJiIVmmvR HTTP/1.1
 Content-Type: application/json;charset=UTF-8
 Content-Length: 123
 Host: localhost:8080
@@ -3557,7 +3571,7 @@ Content-Length: 97
 <h5 id="_요청_38_http_request">HTTP request</h5>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">PATCH /api/diets?_csrf=w204meBmIYM1fps1pHHNmCklzaniGbQ11vz7pvj5j2jGPxyzoA9cr9UEE-EYG6xWklz5qxsd4JCGLYYY78TIw8rMvQz-C3nW HTTP/1.1
+<pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">PATCH /api/diets?_csrf=YTt_N828nrmOJhECqZszeE86gb12RF9mfvnhjUCfAR6mAhwPVV0aVvSL_ICjRSc7nbYHGnperIVDJW9LRsnX73j6M3zDYyU5 HTTP/1.1
 Content-Type: application/json;charset=UTF-8
 Content-Length: 123
 Host: localhost:8080
@@ -3682,7 +3696,7 @@ Content-Length: 146
 <h5 id="_요청_39_http_request">HTTP request</h5>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">DELETE /api/diets?_csrf=90d1-4z-6VOFrvqxCLf8qpWAgS4DdcxmKTAuHRuNiSQwTOgZw3VEz76f0TWomM_UOJrInKLkrBYyFv9LEFYYLy3o70FRKtwq HTTP/1.1
+<pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">DELETE /api/diets?_csrf=CmgWw2nAkoMLu1NMFB8qolsh_A5PKysxvLuJjx5v7jEjTDD6Ow0n81D2pOIm3mB9JzIelD1D0Td-SUkcj42463tf3QdHfFWb HTTP/1.1
 Content-Type: application/json;charset=UTF-8
 Content-Length: 41
 Host: localhost:8080
@@ -3795,7 +3809,7 @@ Content-Length: 97
 <h5 id="_요청_40_http_request">HTTP request</h5>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">DELETE /api/diets?_csrf=W9hBjqUQhbTMkp6vq5BhCrfvc-mWQ8ADPXIvV6uMc8GaT7PVbep0vMMot4XhqvyYnb1VOtTdXouuJ6QuWBEYYc2_Q6CpeYPl HTTP/1.1
+<pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">DELETE /api/diets?_csrf=lr0ZqKh8XZojAlo69KKBqK0W7_CFFbDeTu5haXcb7PaG4cRprtkhyZlFaq4ONTsMxI-1zJwhwsi1cYXzL40AUBEqiJKy1KBQ HTTP/1.1
 Content-Type: application/json;charset=UTF-8
 Content-Length: 41
 Host: localhost:8080
@@ -3902,11 +3916,1232 @@ Content-Length: 146
 </div>
 </div>
 </div>
+<div class="sect1">
+<h2 id="_활동_api_activitycontroller">활동 API (ActivityController)</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_한_회원의_걷기_정보_조회_api">한 회원의 걷기 정보 조회 API</h3>
+<div class="sect3">
+<h4 id="_요청_41">요청</h4>
+<div class="sect4">
+<h5 id="_요청_41_http_request">HTTP request</h5>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">GET /api/activities/testId HTTP/1.1
+Host: localhost:8080</code></pre>
+</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_요청_41_path_parameters">Path parameters</h5>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 1. /api/activities/{username}</caption>
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Parameter</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>username</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">회원ID</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_응답_15">응답</h4>
+<div class="sect4">
+<h5 id="_응답_15_http_response">HTTP response</h5>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">HTTP/1.1 200 OK
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+Content-Type: application/json
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 0
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+X-Frame-Options: DENY
+Content-Length: 651
+
+{
+  "status" : "성공",
+  "message" : "testId의 걷기 정보",
+  "data" : [ {
+    "username" : "testId",
+    "distance" : 1.1,
+    "avgHeartRate" : 111.1,
+    "walkDate" : "2024-01-01"
+  }, {
+    "username" : "testId",
+    "distance" : 2.1,
+    "avgHeartRate" : 121.1,
+    "walkDate" : "2024-02-01"
+  }, {
+    "username" : "testId",
+    "distance" : 3.1,
+    "avgHeartRate" : 131.1,
+    "walkDate" : "2024-03-01"
+  }, {
+    "username" : "testId",
+    "distance" : 4.1,
+    "avgHeartRate" : 141.1,
+    "walkDate" : "2024-04-01"
+  }, {
+    "username" : "testId",
+    "distance" : 5.1,
+    "avgHeartRate" : 151.1,
+    "walkDate" : "2024-05-01"
+  } ]
+}</code></pre>
+</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_응답_15_response_fields">Response fields</h5>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Path</th>
+<th class="tableblock halign-left valign-top">Type</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>status</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">처리 결과 상태</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>message</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">처리 메시지</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>data[].username</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">회원ID</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>data[].distance</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Number</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">거리</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>data[].avgHeartRate</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Number</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">평균 심박수</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>data[].walkDate</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">날짜</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_한_회원의_하루_걷기_정보_조회_api">한 회원의 하루 걷기 정보 조회 API</h3>
+<div class="sect3">
+<h4 id="_요청_42">요청</h4>
+<div class="sect4">
+<h5 id="_요청_42_http_request">HTTP request</h5>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">GET /api/activities/testId/2024-01-01 HTTP/1.1
+Host: localhost:8080</code></pre>
+</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_요청_42_path_parameters">Path parameters</h5>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 1. /api/activities/{username}/{date}</caption>
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Parameter</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>username</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">회원ID</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>date</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">조회할 날짜</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_응답_16">응답</h4>
+<div class="sect4">
+<h5 id="_응답_16_http_response">HTTP response</h5>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">HTTP/1.1 200 OK
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+Content-Type: application/json
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 0
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+X-Frame-Options: DENY
+Content-Length: 672
+
+{
+  "status" : "성공",
+  "message" : "testId의 2024-01-01 날짜의 걷기 정보",
+  "data" : [ {
+    "username" : "testId",
+    "distance" : 1.1,
+    "avgHeartRate" : 111.1,
+    "walkDate" : "2024-01-01"
+  }, {
+    "username" : "testId",
+    "distance" : 2.1,
+    "avgHeartRate" : 121.1,
+    "walkDate" : "2024-01-01"
+  }, {
+    "username" : "testId",
+    "distance" : 3.1,
+    "avgHeartRate" : 131.1,
+    "walkDate" : "2024-01-01"
+  }, {
+    "username" : "testId",
+    "distance" : 4.1,
+    "avgHeartRate" : 141.1,
+    "walkDate" : "2024-01-01"
+  }, {
+    "username" : "testId",
+    "distance" : 5.1,
+    "avgHeartRate" : 151.1,
+    "walkDate" : "2024-01-01"
+  } ]
+}</code></pre>
+</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_응답_16_response_fields">Response fields</h5>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Path</th>
+<th class="tableblock halign-left valign-top">Type</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>status</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">처리 결과 상태</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>message</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">처리 메시지</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>data[].username</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">회원ID</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>data[].distance</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Number</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">거리</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>data[].avgHeartRate</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Number</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">평균 심박수</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>data[].walkDate</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">날짜</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_하나의_걷기_정보_조회_성공_api">하나의 걷기 정보 조회 (성공) API</h3>
+<div class="sect3">
+<h4 id="_요청_43">요청</h4>
+<div class="sect4">
+<h5 id="_요청_43_http_request">HTTP request</h5>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">GET /api/activities?id=100 HTTP/1.1
+Host: localhost:8080</code></pre>
+</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_요청_43_query_parameters">Query parameters</h5>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Parameter</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>id</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">걷기 정보 ID</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_응답_17">응답</h4>
+<div class="sect4">
+<h5 id="_응답_17_http_response">HTTP response</h5>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">HTTP/1.1 200 OK
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+Content-Type: application/json
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 0
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+X-Frame-Options: DENY
+Content-Length: 193
+
+{
+  "status" : "성공",
+  "message" : "id = 100의 걷기 정보",
+  "data" : {
+    "username" : "testId",
+    "distance" : 1.1,
+    "avgHeartRate" : 111.1,
+    "walkDate" : "2024-01-01"
+  }
+}</code></pre>
+</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_응답_17_response_fields">Response fields</h5>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Path</th>
+<th class="tableblock halign-left valign-top">Type</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>status</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">처리 결과 상태</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>message</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">처리 메시지</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>data.username</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">회원ID</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>data.distance</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Number</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">거리</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>data.avgHeartRate</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Number</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">평균 심박수</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>data.walkDate</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">날짜</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_하나의_걷기_정보_조회_실패_api">하나의 걷기 정보 조회 (실패) API</h3>
+<div class="sect3">
+<h4 id="_요청_44">요청</h4>
+<div class="sect4">
+<h5 id="_요청_44_http_request">HTTP request</h5>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">GET /api/activities?id=100 HTTP/1.1
+Host: localhost:8080</code></pre>
+</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_요청_44_query_parameters">Query parameters</h5>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Parameter</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>id</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">걷기 정보 ID</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_응답_18">응답</h4>
+<div class="sect4">
+<h5 id="_응답_18_http_response">HTTP response</h5>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">HTTP/1.1 400 Bad Request
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+Content-Type: application/json
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 0
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+X-Frame-Options: DENY
+Content-Length: 161
+
+{
+  "status" : "실패",
+  "message" : "결과를 확인하고 다시시도해주세요.",
+  "data" : "해당 활동(걷기)정보를 찾을 수 없습니다."
+}</code></pre>
+</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_응답_18_response_fields">Response fields</h5>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Path</th>
+<th class="tableblock halign-left valign-top">Type</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>status</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">처리 결과 상태</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>message</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">처리 메시지</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>data</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">처리 결과</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_걷기_정보_추가_성공_api">걷기 정보 추가 (성공) API</h3>
+<div class="sect3">
+<h4 id="_요청_45">요청</h4>
+<div class="sect4">
+<h5 id="_요청_45_http_request">HTTP request</h5>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">POST /api/activities?_csrf=Ya3Ccky7IEyb-QJMvSysms413T0nDwfX6AdE1JyljMDsweN_VZn3S3mJFCq2mjt4igGYqPsM8AUSNjf62mEg5q-c6vTe99tO HTTP/1.1
+Content-Type: application/json;charset=UTF-8
+Content-Length: 102
+Host: localhost:8080
+
+{
+  "username" : "testId",
+  "distance" : 3.1,
+  "avgHeartRate" : 124.3,
+  "walkDate" : "2024-01-01"
+}</code></pre>
+</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_요청_45_request_fields">Request fields</h5>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Path</th>
+<th class="tableblock halign-left valign-top">Type</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>username</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">회원ID</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>distance</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Number</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">거리</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>avgHeartRate</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Number</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">평균 심박수</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>walkDate</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">날짜</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_응답_19">응답</h4>
+<div class="sect4">
+<h5 id="_응답_19_http_response">HTTP response</h5>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">HTTP/1.1 200 OK
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+Content-Type: application/json
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 0
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+X-Frame-Options: DENY
+Content-Length: 104
+
+{
+  "status" : "성공",
+  "message" : "걷기 정보 추가에 성공하였습니다.",
+  "data" : ""
+}</code></pre>
+</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_응답_19_response_fields">Response fields</h5>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Path</th>
+<th class="tableblock halign-left valign-top">Type</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>status</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">처리 결과 상태</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>message</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">처리 메시지</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_걷기_정보_추가_실패_api">걷기 정보 추가 (실패) API</h3>
+<div class="sect3">
+<h4 id="_요청_46">요청</h4>
+<div class="sect4">
+<h5 id="_요청_46_http_request">HTTP request</h5>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">POST /api/activities?_csrf=wBDGFHLhUVHSC568TFs7fvRK9MzL5fP0xhPTqz5W8Pz09ldR8HP0ckDWMmj_Pf_YKnYPT8Qv2a2u18fZoyfmngg3kp-QxGZk HTTP/1.1
+Content-Type: application/json;charset=UTF-8
+Content-Length: 102
+Host: localhost:8080
+
+{
+  "username" : "testId",
+  "distance" : 3.1,
+  "avgHeartRate" : 124.3,
+  "walkDate" : "2024-01-01"
+}</code></pre>
+</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_요청_46_request_fields">Request fields</h5>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Path</th>
+<th class="tableblock halign-left valign-top">Type</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>username</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">회원ID</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>distance</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Number</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">거리</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>avgHeartRate</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Number</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">평균 심박수</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>walkDate</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">날짜</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_응답_20">응답</h4>
+<div class="sect4">
+<h5 id="_응답_20_http_response">HTTP response</h5>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">HTTP/1.1 400 Bad Request
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+Content-Type: application/json
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 0
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+X-Frame-Options: DENY
+Content-Length: 146
+
+{
+  "status" : "실패",
+  "message" : "결과를 확인하고 다시시도해주세요.",
+  "data" : "회원정보를 찾을 수 없습니다."
+}</code></pre>
+</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_응답_20_response_fields">Response fields</h5>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Path</th>
+<th class="tableblock halign-left valign-top">Type</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>status</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">처리 결과 상태</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>message</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">처리 메시지</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_걷기_정보_수정_성공_api">걷기 정보 수정 (성공) API</h3>
+<div class="sect3">
+<h4 id="_요청_47">요청</h4>
+<div class="sect4">
+<h5 id="_요청_47_http_request">HTTP request</h5>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">PATCH /api/activities?_csrf=hNtjF9RCwHYScGx1apm8eWl21UJtwzhmdES0keoQ2X6RbHsf571ac-Yj8hA_RVpHXrSISQtD-HpbpwBLFXXQpth1706oVU98 HTTP/1.1
+Content-Type: application/json;charset=UTF-8
+Content-Length: 116
+Host: localhost:8080
+
+{
+  "id" : 100,
+  "username" : "testId",
+  "distance" : 3.1,
+  "avgHeartRate" : 124.3,
+  "walkDate" : "2024-01-01"
+}</code></pre>
+</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_요청_47_request_fields">Request fields</h5>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Path</th>
+<th class="tableblock halign-left valign-top">Type</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>id</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Number</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">걷기 정보 ID</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>username</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">회원ID</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>distance</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Number</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">거리</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>avgHeartRate</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Number</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">평균 심박수</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>walkDate</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">날짜</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_응답_21">응답</h4>
+<div class="sect4">
+<h5 id="_응답_21_http_response">HTTP response</h5>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">HTTP/1.1 200 OK
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+Content-Type: application/json
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 0
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+X-Frame-Options: DENY
+Content-Length: 104
+
+{
+  "status" : "성공",
+  "message" : "걷기 정보 수정에 성공하였습니다.",
+  "data" : ""
+}</code></pre>
+</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_응답_21_response_fields">Response fields</h5>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Path</th>
+<th class="tableblock halign-left valign-top">Type</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>status</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">처리 결과 상태</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>message</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">처리 메시지</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_걷기_정보_수정_실패_api">걷기 정보 수정 (실패) API</h3>
+<div class="sect3">
+<h4 id="_요청_48">요청</h4>
+<div class="sect4">
+<h5 id="_요청_48_http_request">HTTP request</h5>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">PATCH /api/activities?_csrf=taPTeo9ivNwriAsVtOdjVXlCVe_TuPZBw5yhxwznMcWW4cCLgJPiSb8A3ewG6Wghh8pXYhokeI2328dsp_-X9DvXA_yn1_fo HTTP/1.1
+Content-Type: application/json;charset=UTF-8
+Content-Length: 116
+Host: localhost:8080
+
+{
+  "id" : 100,
+  "username" : "testId",
+  "distance" : 3.1,
+  "avgHeartRate" : 124.3,
+  "walkDate" : "2024-01-01"
+}</code></pre>
+</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_요청_48_request_fields">Request fields</h5>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Path</th>
+<th class="tableblock halign-left valign-top">Type</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>id</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Number</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">걷기 정보 ID</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>username</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">회원ID</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>distance</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Number</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">거리</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>avgHeartRate</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Number</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">평균 심박수</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>walkDate</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">날짜</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_응답_22">응답</h4>
+<div class="sect4">
+<h5 id="_응답_22_http_response">HTTP response</h5>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">HTTP/1.1 400 Bad Request
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+Content-Type: application/json
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 0
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+X-Frame-Options: DENY
+Content-Length: 146
+
+{
+  "status" : "실패",
+  "message" : "결과를 확인하고 다시시도해주세요.",
+  "data" : "회원정보를 찾을 수 없습니다."
+}</code></pre>
+</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_응답_22_response_fields">Response fields</h5>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Path</th>
+<th class="tableblock halign-left valign-top">Type</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>status</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">처리 결과 상태</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>message</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">처리 메시지</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_걷기_정보_삭제_성공_api">걷기 정보 삭제 (성공) API</h3>
+<div class="sect3">
+<h4 id="_요청_49">요청</h4>
+<div class="sect4">
+<h5 id="_요청_49_http_request">HTTP request</h5>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">DELETE /api/activities?_csrf=QW9J-heydGlWgv3sMsRscAhfgMjxO01N6WOsfITE7DAbTSEacVh6zifQFl974JnYC-lYEj9rrarBD3Vg2FLOSr2g3Al4exgs HTTP/1.1
+Content-Type: application/json;charset=UTF-8
+Content-Length: 41
+Host: localhost:8080
+
+{
+  "id" : 100,
+  "username" : "testId"
+}</code></pre>
+</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_요청_49_request_fields">Request fields</h5>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Path</th>
+<th class="tableblock halign-left valign-top">Type</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>id</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Number</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">식단ID</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>username</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">회원ID</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_응답_23">응답</h4>
+<div class="sect4">
+<h5 id="_응답_23_http_response">HTTP response</h5>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">HTTP/1.1 200 OK
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+Content-Type: application/json
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 0
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+X-Frame-Options: DENY
+Content-Length: 104
+
+{
+  "status" : "성공",
+  "message" : "걷기 정보 삭제에 성공하였습니다.",
+  "data" : ""
+}</code></pre>
+</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_응답_23_response_fields">Response fields</h5>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Path</th>
+<th class="tableblock halign-left valign-top">Type</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>status</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">처리 결과 상태</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>message</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">처리 메시지</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>data</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">처리 결과</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_걷기_정보_삭제_실패_api">걷기 정보 삭제 (실패) API</h3>
+<div class="sect3">
+<h4 id="_요청_50">요청</h4>
+<div class="sect4">
+<h5 id="_요청_50_http_request">HTTP request</h5>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">DELETE /api/activities?_csrf=oT_qEd5vdD1QQz91XJx_cBo9kk6w_CLAAi9ceEy15tt4SOeKmAveJrwJTQp9dggWarFLQnsEv3aAxRLtZk1oHXWC1-8dKoS5 HTTP/1.1
+Content-Type: application/json;charset=UTF-8
+Content-Length: 41
+Host: localhost:8080
+
+{
+  "id" : 100,
+  "username" : "testId"
+}</code></pre>
+</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_요청_50_request_fields">Request fields</h5>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Path</th>
+<th class="tableblock halign-left valign-top">Type</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>id</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Number</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">식단ID</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>username</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">회원ID</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_응답_24">응답</h4>
+<div class="sect4">
+<h5 id="_응답_24_http_response">HTTP response</h5>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">HTTP/1.1 400 Bad Request
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+Content-Type: application/json
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 0
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+X-Frame-Options: DENY
+Content-Length: 146
+
+{
+  "status" : "실패",
+  "message" : "결과를 확인하고 다시시도해주세요.",
+  "data" : "회원정보를 찾을 수 없습니다."
+}</code></pre>
+</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_응답_24_response_fields">Response fields</h5>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Path</th>
+<th class="tableblock halign-left valign-top">Type</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>status</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">처리 결과 상태</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>message</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">처리 메시지</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>data</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">처리 결과</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
 </div>
 <div id="footer">
 <div id="footer-text">
 Version 0.0.1-SNAPSHOT<br>
-Last updated 2024-07-14 22:11:35 +0900
+Last updated 2024-07-25 14:08:22 +0900
 </div>
 </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.3/highlight.min.js"></script>

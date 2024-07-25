@@ -1,0 +1,56 @@
+== 활동 API (ActivityController)
+// === 걷기 정보 추가 API
+// ==== 요청
+// operation::activity-controller-test/save-walk[snippets="http-request,request-fields"]
+// ==== 응답
+// operation::activity-controller-test/save-walk[snippets="http-response,response-fields"]
+=== 한 회원의 걷기 정보 조회 API
+==== 요청
+operation::activity-controller-test/get-walks-test[snippets="http-request,path-parameters"]
+==== 응답
+operation::activity-controller-test/get-walks-test[snippets="http-response,response-fields"]
+=== 한 회원의 하루 걷기 정보 조회 API
+==== 요청
+operation::activity-controller-test/get-walks-by-date-test[snippets="http-request,path-parameters"]
+==== 응답
+operation::activity-controller-test/get-walks-by-date-test[snippets="http-response,response-fields"]
+=== 하나의 걷기 정보 조회 (성공) API
+==== 요청
+operation::activity-controller-test/get-walk-test[snippets="http-request,query-parameters"]
+==== 응답
+operation::activity-controller-test/get-walk-test[snippets="http-response,response-fields"]
+=== 하나의 걷기 정보 조회 (실패) API
+==== 요청
+operation::activity-controller-test/get-walk-fail-test[snippets="http-request,query-parameters"]
+==== 응답
+operation::activity-controller-test/get-walk-fail-test[snippets="http-response,response-fields"]
+=== 걷기 정보 추가 (성공) API
+==== 요청
+operation::activity-controller-test/save-walk-test[snippets="http-request,request-fields"]
+==== 응답
+operation::activity-controller-test/save-walk-test[snippets="http-response,response-fields"]
+=== 걷기 정보 추가 (실패) API
+==== 요청
+operation::activity-controller-test/save-walk-fail-test[snippets="http-request,request-fields"]
+==== 응답
+operation::activity-controller-test/save-walk-fail-test[snippets="http-response,response-fields"]
+=== 걷기 정보 수정 (성공) API
+==== 요청
+operation::activity-controller-test/update-walk-test[snippets="http-request,request-fields"]
+==== 응답
+operation::activity-controller-test/update-walk-test[snippets="http-response,response-fields"]
+=== 걷기 정보 수정 (실패) API
+==== 요청
+operation::activity-controller-test/update-walk-fail-test[snippets="http-request,request-fields"]
+==== 응답
+operation::activity-controller-test/update-walk-fail-test[snippets="http-response,response-fields"]
+=== 걷기 정보 삭제 (성공) API
+==== 요청
+operation::activity-controller-test/delete-walk-test[snippets="http-request,request-fields"]
+==== 응답
+operation::activity-controller-test/delete-walk-test[snippets="http-response,response-fields"]
+=== 걷기 정보 삭제 (실패) API
+==== 요청
+operation::activity-controller-test/delete-walk-fail-test[snippets="http-request,request-fields"]
+==== 응답
+operation::activity-controller-test/delete-walk-fail-test[snippets="http-response,response-fields"]
