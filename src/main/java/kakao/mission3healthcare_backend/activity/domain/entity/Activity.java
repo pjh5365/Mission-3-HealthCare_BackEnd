@@ -1,28 +1,33 @@
-package kakao.mission3healthcare_backend.diet.domain.entity;
+package kakao.mission3healthcare_backend.activity.domain.entity;
 
 import jakarta.persistence.Column;
+import jakarta.persistence.DiscriminatorColumn;
 import jakarta.persistence.Entity;
-import jakarta.persistence.EnumType;
-import jakarta.persistence.Enumerated;
 import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.Inheritance;
+import jakarta.persistence.InheritanceType;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
+import kakao.mission3healthcare_backend.auth.domain.entity.Member;
 import kakao.mission3healthcare_backend.common.entity.BaseEntity;
-import kakao.mission3healthcare_backend.diet.domain.NutrientType;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
+/**
+ * 활동 Entity
+ *
+ * @author : parkjihyeok
+ * @since : 2024/07/24
+ */
 @Entity
 @Getter
-@Builder
 @NoArgsConstructor
-@AllArgsConstructor
-public class Nutrient extends BaseEntity {
+@Inheritance(strategy = InheritanceType.JOINED)
+@DiscriminatorColumn(name = "activity_type")
+public class Activity extends BaseEntity {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -30,10 +35,10 @@ public class Nutrient extends BaseEntity {
 	private Long id;
 
 	@ManyToOne(fetch = FetchType.LAZY)
-	@JoinColumn(name = "food_menu_id", nullable = false)
-	private FoodMenu foodMenu;
+	@JoinColumn(name = "member_id")
+	private Member member;
 
-	@Enumerated(EnumType.STRING)
-	private NutrientType nutrientType; // 영양소 종류
-	private Double amount; // 용량
+	public Activity(Member member) {
+		this.member = member;
+	}
 }
